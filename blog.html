@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Joseph Pellegrini - Blog</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/798cb114ae.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="main-header full-width">
+      <nav class="main-nav" id="main-nav-cnt">
+        <div>
+          <a class="main-nav__a" href="index.html">Joseph Pellegrini</a>
+        </div>
+        <ul class="main-ul">
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="index.html#education"
+              onclick="toggle_sm_menu()"
+              >Formation</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="index.html#experience"
+              onclick="toggle_sm_menu()"
+              >Exp&eacute;rience</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="index.html#skills"
+              onclick="toggle_sm_menu()"
+              >Comp&eacute;tences</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="index.html#projects"
+              onclick="toggle_sm_menu()"
+              >Projets</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="index.html#contact"
+              onclick="toggle_sm_menu()"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div>
+          <a class="main-nav__a" href="blog.html">Blog</a>
+        </div>
+      </nav>
+      <div
+        class="small-nav-toggle"
+        id="main-nav-toggler"
+        onclick="toggle_sm_menu()"
+      >
+        <img
+          src="images/icons/menu.svg"
+          alt="menu"
+          class="small-nav-toggle__btn"
+          id="small-nav-open"
+        />
+        <img
+          src="images/icons/close.svg"
+          alt="close menu"
+          class="small-nav-toggle__btn"
+          id="small-nav-close"
+        />
+      </div>
+    </header>
+    <main>
+      <h1 class="blog-top-section__h1">Blog</h1>
+      <div class="blog-article-container">
+        <a class="blog-article-link" href="blog/tor.html">
+          <h2 class="blog-article-title">Le r&eacute;seau TOR</h2>
+          <p class="blog-article-desc">
+            Br&egrave;ve pr&eacute;sentation du fonctionnement du r&eacute;seau
+            TOR.
+          </p>
+          <p class="blog-article-date">20/05/2021</p>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright <i class="far fa-copyright"></i> 2021 - Joseph Pellegrini</p>
+    </footer>
+    <script>
+      var sm_menu_open = document.getElementById("small-nav-open"),
+        sm_menu_close = document.getElementById("small-nav-close"),
+        menu = document.getElementById("main-nav-cnt"),
+        sm_menu_opened = false;
+
+      function toggle_sm_menu() {
+        if (sm_menu_opened) {
+          menu.style.display = "none";
+          sm_menu_open.style.display = "flex";
+          sm_menu_close.style.display = "none";
+          sm_menu_opened = false;
+        } else {
+          menu.style.display = "flex";
+          sm_menu_open.style.display = "none";
+          sm_menu_close.style.display = "flex";
+          sm_menu_opened = true;
+        }
+      }
+    </script>
+  </body>
+</html>
