@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Joseph Pellegrini - Blog</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/798cb114ae.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="main-header full-width">
+      <nav class="main-nav" id="main-nav-cnt">
+        <div>
+          <a class="main-nav__a" href="../index.html">Joseph Pellegrini</a>
+        </div>
+        <ul class="main-ul">
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="../index.html#education"
+              onclick="toggle_sm_menu()"
+              >Formation</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="../index.html#experience"
+              onclick="toggle_sm_menu()"
+              >Exp&eacute;rience</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="../index.html#skills"
+              onclick="toggle_sm_menu()"
+              >Comp&eacute;tences</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="../index.html#projects"
+              onclick="toggle_sm_menu()"
+              >Projets</a
+            >
+          </li>
+          <li class="main-ul__li">
+            <a
+              class="main-nav__a"
+              href="../index.html#contact"
+              onclick="toggle_sm_menu()"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div>
+          <a class="main-nav__a" href="../blog.html">Blog</a>
+        </div>
+      </nav>
+      <div
+        class="small-nav-toggle"
+        id="main-nav-toggler"
+        onclick="toggle_sm_menu()"
+      >
+        <img
+          src="../images/icons/menu.svg"
+          alt="menu"
+          class="small-nav-toggle__btn"
+          id="small-nav-open"
+        />
+        <img
+          src="../images/icons/close.svg"
+          alt="close menu"
+          class="small-nav-toggle__btn"
+          id="small-nav-close"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="article-container">
+        <p class="article-back">
+          <a href="../blog.html"> < Retour aux articles</a>
+        </p>
+        <h1 class="article-title">Le r&eacute;seau TOR</h1>
+        <div class="article-main-img-container">
+          <img src="tor/tor.png" />
+        </div>
+        <h2>Qu'est-ce que TOR?</h2>
+        <div class="article-section">
+          <p>
+            Tor (pour « The Onion Router ») est un r&eacute;seau informatique
+            superpos&eacute; mondial d&eacute;centralis&eacute;, dont le but
+            initial est d’assurer une s&eacute;curit&eacute; plus importante que
+            le r&eacute;seau internet classique.
+          </p>
+          <p>
+            Le principe fondamental du r&eacute;seau Tor est de faire transiter
+            les donn&eacute;es des utilisateurs sur un r&eacute;seau
+            distribu&eacute; g&eacute;r&eacute; par des volontaires dans le
+            monde entier, emp&ecirc;chant (du moins, rendant plus difficile) les
+            gouvernements, fournisseurs d’acc&egrave;s &agrave; internet ou
+            certains pirates d’&ecirc;tre inform&eacute;s des sites
+            visit&eacute;s par les utilisateurs.
+            <br />
+            Pour ce faire, Tor utilise le « routage oignon », qui consiste
+            &agrave; acheminer le trafic &agrave; travers plusieurs serveurs, et
+            de le chiffrer &agrave; chaque &eacute;tape.
+          </p>
+          <p>
+            Le r&eacute;seau Tor poss&egrave;de son propre navigateur, Tor
+            browser qui est bas&eacute; sur Firefox et constitue le moyen le
+            plus ais&eacute; et le plus r&eacute;pandu d’acc&eacute;der au
+            r&eacute;seau.
+          </p>
+        </div>
+        <h2>Un peu d'histoire</h2>
+        <div class="article-section">
+          <p>
+            En 1995, pr&eacute;occup&eacute;s par le manque de
+            s&eacute;curit&eacute; sur internet, et la facilit&eacute; avec
+            laquelle les utilisateurs pouvaient &ecirc;tre suivis et
+            surveill&eacute;s, Mike Reed, David Goldschlag et Paul Syverson du
+            laboratoire de recherche naval am&eacute;ricain (NRL),
+            &eacute;tudient un moyen de cr&eacute;er un r&eacute;seau palliant
+            ces probl&egrave;mes, et d&eacute;ploient de premiers prototypes de
+            « routage oignon ».
+          </p>
+          <p>
+            Au d&eacute;but des ann&eacute;es 2000, Roger Dingledine,
+            dipl&ocirc;m&eacute; du MIT, commence &agrave; travailler aux
+            c&ocirc;t&eacute;s de Paul Syverson sur un projet de routage en
+            oignon du NRL. Nick Mathewson, un camarade de classe de Dingledine
+            au MIT, les rejoint rapidement.
+          </p>
+          <div class="article-img-container-min">
+            <img src="tor/roger_dingledine.jpeg" />
+            <p>Roger Dingledine en 2013</p>
+          </div>
+          <p>
+            Le r&eacute;seau est d&eacute;ploy&eacute; en octobre 2002, et son
+            code publi&eacute; sous une licence de logiciel libre. Fin 2003, le
+            r&eacute;seau comptait plus d’une dizaine de noeuds volontaires,
+            principalement aux &Eacute;tats-Unis.
+          </p>
+          <p>
+            En 2004, l’EFF (Electronic Frontier Foundation) commence &agrave;
+            financer le projet, ce qui m&egrave;ne en 2006 &agrave; la
+            cr&eacute;ation du Tor Project Inc, une organisation &agrave; but
+            non lucratif, dont le but est de maintenir le d&eacute;veloppement
+            du r&eacute;seau.
+          </p>
+          <p>
+            R&eacute;alisant la difficult&eacute; pour les utilisateurs lambda
+            &agrave; acc&eacute;der au r&eacute;seau, l’organisation lance en
+            2008 le d&eacute;veloppement de Tor Browser, le navigateur officiel
+            du r&eacute;seau.
+          </p>
+          <p>
+            Depuis, Tor est consid&eacute;rablement utilis&eacute;, notamment
+            par des activistes dont les prises de position sont ill&eacute;gales
+            dans certains pays autoritaires, mais &eacute;galement parfois pour
+            des activit&eacute;s illicites (trafic de drogue, d’armes,
+            p&eacute;dopornographie, etc.).
+          </p>
+        </div>
+        <h2>Le fonctionnement du r&eacute;seau TOR</h2>
+        <div class="article-section">
+          <p>
+            Comme indiqu&eacute; pr&eacute;c&eacute;demment, le r&eacute;seau
+            Tor est compos&eacute; de milliers de noeuds b&eacute;n&eacute;voles
+            (environ 6500 en avril 2021), dont le but est de faire transiter et
+            chiffrer l’information d’une partie à l’autre du r&eacute;seau. Ces
+            noeuds, &eacute;galement appel&eacute;s routers, communiquent entre
+            eux via des connexions TLS utilisant des cl&eacute;s
+            &eacute;ph&eacute;m&egrave;res, celles-ci permettant de s’assurer
+            que les donn&eacute;es restent int&egrave;gres et confidentielles.
+            Les donn&eacute;es transitent d’un client vers un serveur en
+            empruntant un circuit cr&eacute;&eacute; par « l’onion proxy » du
+            client, g&eacute;n&eacute;ralement le navigateur Tor.<br />
+            &Eacute;tudions le processus de transit de l’information plus en
+            d&eacute;tail.
+          </p>
+          <h3>Les cellules</h3>
+          <p>
+            Les cellules sont les unit&eacute;s de communication du
+            r&eacute;seau Tor. Chaque cellule a une taille de 512 octets, et est
+            constitu&eacute;e d’un header (en-t&ecirc;te) et d’une payload
+            (charge utile). Le header comprend en premier lieu un « circuit
+            identifier » sp&eacute;cifiant le circuit auquel la cellule fait
+            r&eacute;f&eacute;rence. Il permet de diff&eacute;rencier les
+            circuits, ces derniers pouvant &ecirc;tre multiplex&eacute;s sur une
+            seule connexion TLS. Le header comporte &eacute;galement une
+            commande, indiquant l’action &agrave; effectuer &agrave; partir de
+            la payload. <br />
+            Selon cette commande, une cellule est une cellule de contr&ocirc;le,
+            qui est interpr&eacute;t&eacute;e par le noeud qui la re&ccedil;oit,
+            ou une cellule relai, permettant de faire transiter la
+            donn&eacute;e.
+          </p>
+          <p>
+            Les commandes des cellules de contr&ocirc;le sont : <br />
+            -Padding, utilis&eacute;e principalement pour le keepalive
+            (s’assurer que le lien entre deux noeuds est actif, et
+            emp&ecirc;cher que ce lien soit rompu).<br />
+            -Create, pour cr&eacute;er un nouveau circuit.<br />
+            -Destroy, pour supprimer un circuit.
+          </p>
+          <div class="article-img-container">
+            <img src="tor/control_cell_header.png" />
+            <p>En-t&ecirc;te d’une cellule de contr&ocirc;le</p>
+          </div>
+          <p>Les cellules relais ont toutes une commande « Relay ».</p>
+          <p>
+            En outre, les cellules relai ont un en-t&ecirc;te
+            suppl&eacute;mentaire contenant : <br />
+            -Un identifiant de stream, ces derniers pouvant &ecirc;tre
+            multiplex&eacute;s sur un m&ecirc;me circuit. <br />
+            -Un checksum, pour s’assurer de l’int&eacute;grit&eacute; de la
+            payload. <br />
+            -La taille de la payload.<br />
+            -Une commande suppl&eacute;mentaire.
+          </p>
+          <p>
+            Cette commande suppl&eacute;mentaire peut &ecirc;tre :<br />
+            -<i>Relay data</i>, pour les donn&eacute;es qui circulent dans le
+            flux.<br />
+            -<i>Relay begin</i>, pour ouvrir un stream.<br />
+            -<i>Relay end</i>, pour fermer un stream.<br />
+            -<i>Relay teardown</i>, pour fermer un stream cass&eacute;.<br />
+            -<i>Relay connected</i>, pour notifier l’onion proxy que le relai a
+            commenc&eacute;.<br />
+            -<i>Relay extend/extended</i>, pour &eacute;tendre le circuit et
+            accuser r&eacute;ception (acknowledge).<br />
+            -<i>Relay truncate</i>, pour fermer une partie du circuit et accuser
+            r&eacute;ception.<br />
+            -<i>Relay sendme</i>, utilis&eacute; pour le contr&ocirc;le des
+            embouteillages sur un noeud.<br />
+            -<i>Relay drop</i>, utilis&eacute; pour impl&eacute;menter des
+            communications de tests &agrave; longue port&eacute;e
+          </p>
+          <div class="article-img-container">
+            <img src="tor/relay_cell_header.png" />
+            <p>En-t&ecirc;te d’une cellule relai</p>
+          </div>
+          <p>
+            Les en-t&ecirc;tes et payloads des cellules relais sont
+            chiffr&eacute;s et d&eacute;chiffr&eacute;s lorsque la cellule relai
+            se d&eacute;place le long du circuit, en utilisant un chiffrement
+            AES 128-bit.
+          </p>
+          <h3>Les circuits</h3>
+          <p>
+            Les proxys onion cr&eacute;ent un circuit pour tous les flux TCP.
+            Ainsi, si le navigateur TOR d’un utilisateur ouvre plusieurs pages
+            web, ces derni&egrave;res utiliseront le m&ecirc;me circuit. Ce
+            circuit est r&eacute;initialis&eacute; fr&eacute;quemment pour
+            garantir une &eacute;viter de nuire &agrave; l’exp&eacute;rience
+            utilisateur.
+          </p>
+          <p>
+            Les circuits sont cr&eacute;&eacute;s de mani&egrave;re
+            incr&eacute;mentielle, c’est-&agrave;-dire en n&eacute;gociant une
+            cl&eacute; avec chaque noeud du circuit, un « saut » &agrave; la
+            fois. <br />Supposons qu’Alice souhaite cr&eacute;er un nouveau
+            circuit, dont elle a choisi les noeuds le composant.<br />
+            Alice envoie tout d’abord une cellule de type « create » au premier
+            noeud sur son chemin, appel&eacute; Bob, et choisit un « circID »
+            (pour rappel, identifiant de circuit) non utilis&eacute;.<br />
+            La payload de la cellule permet de mettre en place le chiffrage
+            sym&eacute;trique via l’algorithme de Diffie-Hellman. Elle contient
+            ainsi un nombre premier nomm&eacute; <i>g</i>, &eacute;lev&eacute;
+            &agrave; une puissance <i>x</i>, choisie au hasard. Bob envoie alors
+            le même nombre <i>g</i>, cette fois &eacute;lev&eacute; &agrave; la
+            puissance <i>y</i>, &eacute;galement choisie al&eacute;atoirement.
+            Pour rappel du fonctionnement de l’algorithme de Diffie-Hellman,
+            Alice et Bob ont d&eacute;sormais <i>g <sup>x</sup></i> ainsi que
+            <i>g <sup>y</sup></i
+            >, et peuvent ainsi calculer <i>K = g <sup>xy</sup></i
+            >, et utiliser ce nombre pour chiffrer leur communication.
+          </p>
+          <p>
+            Pour &eacute;tendre le circuit, Alice envoie une cellule relai de
+            type « extend » à Bob, en sp&eacute;cifiant l’adresse du noeud
+            qu’elle veut ajouter au circuit, appel&eacute; ici Carol, et ajoute
+            &agrave; la payload de la cellule <i>g <sup>x2</sup></i
+            >, avec <i>x2</i> choisi al&eacute;atoirement, qui, comme avec Bob
+            permettra de calculer une cl&eacute; <i>K<sub>1</sub></i
+            >, permettant le chiffrement des &eacute;changes.<br />
+            Bob re&ccedil;oit une cellule relai de type « extend ». Comme il est
+            le dernier noeud du circuit, il cr&eacute;e une cellule de type «
+            create » ayant toujours <i>g <sup>x2</sup></i> pour payload, et
+            l’envoie &agrave; Carol. Comme Alice pr&eacute;c&eacute;demment, Bob
+            choisit un nouveau <i>circID</i>.<br />
+            Lorsque Carol re&ccedil;oit la cellule, elle renvoie &agrave; Bob
+            <i>g <sup>y2</sup></i
+            >, qui renvoie ce nombre &agrave; Alice via une cellule relai de
+            type « extended ». Alice et Carol peuvent alors calculer
+            <i>K<sub>2</sub> = g <sup>x2y2</sup></i
+            >, et ainsi communiquer en chiffrant leurs donn&eacute;es avec cette
+            cl&eacute;.<br />
+            On peut remarquer que le processus est tr&egrave;s similaire au
+            premier, lors de la cr&eacute;ation d’un chemin entre Alice et
+            Bob.<br />
+            Le sch&eacute;ma ci-dessous r&eacute;sume le processus de
+            cr&eacute;ation de circuit et pr&eacute;sente une communication TCP
+            basique avec un site internet.
+          </p>
+          <div class="article-img-container">
+            <img src="tor/recap_schema.png" />
+            <p>
+              Cr&eacute;ation de circuits et communication avec une page web
+            </p>
+          </div>
+          <p>
+            Alice partage d&eacute;sormais une cl&eacute; avec chacun de noeuds
+            relais sur le circuit.<br />
+            Supposons qu’Alice souhaite, par exemple, envoyer une requ&ecirc;te
+            HTTP &agrave; un site web. Le circuit est compos&eacute; de deux
+            noeuds relais, Bob et Carol. Apr&egrave;s avoir cr&eacute;&eacute;
+            la requ&ecirc;te HTTP, Alice va la chiffrer, d’abord avec la
+            cl&eacute; <i>K<sub>2</sub></i> , partag&eacute;e avec Carol, puis
+            avec la cl&eacute; <i>K</i>, partag&eacute;e avec Bob, puis envoyer
+            cette requ&ecirc;te via une cellule relai.<br />
+            Lors de la r&eacute;ception de la cellule, Bob va la
+            d&eacute;chiffrer gr&acirc;ce &agrave; la cl&eacute; <i>K</i>, puis
+            l’envoyer &agrave; Carol. La cellule reste toujours chiffr&eacute;e
+            avec la cl&eacute; <i>K<sub>2</sub></i> . &Agrave; l’instar de Bob,
+            Carol va d&eacute;chiffrer la cellule &agrave; sa r&eacute;ception,
+            cette fois avec la cl&eacute; <i>K<sub>2</sub></i> , puis l’envoyer
+            au site web demand&eacute; par Alice. Carol va chiffrer la
+            r&eacute;ponse de la part du site web avec la cl&eacute;
+            <i>K<sub>2</sub></i> , apr&egrave;s avoir mis cette r&eacute;ponse
+            dans une nouvelle cellule, puis l’envoyer &agrave; Bob, qui va
+            &agrave; son tour la chiffrer avec la cl&eacute; <i>K</i>.<br />
+            &Agrave; la r&eacute;ception de la cellule, Alice n’aura plus
+            qu’&agrave; la d&eacute;chiffrer avec les cl&eacute;s <i>K</i> et
+            <i>K<sub>2</sub></i> pour obtenir la r&eacute;ponse du site web en
+            clair.
+          </p>
+          <h3>La gestion d'erreurs</h3>
+          <p>
+            Une cellule pouvant &ecirc;tre alt&eacute;r&eacute;e lors de son
+            transport, il est n&eacute;cessaire de g&eacute;rer des cas
+            d’erreurs.<br />
+            Lors de la r&eacute;ception d’une cellule, un noeud v&eacute;rifie
+            son int&eacute;grit&eacute; gr&acirc;ce &agrave; son hash (en
+            pratique, les noeuds v&eacute;rifient seulement que les deux
+            premiers bytes de la v&eacute;rification d’int&eacute;grit&eacute;
+            sont z&eacute;ro). Si la cellule est invalide, le noeud remplace le
+            <i>circID</i> (identifiant de circuit) de la cellule par celui
+            correspondant au noeud suivant sur le chemin, et envoie la cellule
+            au noeud suivant. Si le dernier noeud du circuit reçoit une cellule
+            invalide, le circuit est d&eacute;truit.<br />
+            Pour d&eacute;truire le circuit, le proxy (Alice dans l’exemple de
+            la section pr&eacute;c&eacute;dente) envoie une cellule de
+            contr&ocirc;le de type « destroy ». Chaque noeud sur le chemin ferme
+            alors les flux sur ce circuit et envoie une cellule « destroy » au
+            noeud suivant sur le chemin.
+          </p>
+          <h3>L’ouverture et la fermeture de streams</h3>
+          <p>
+            Lorsque l’onion proxy souhaite &eacute;tablir une connexion TCP
+            &agrave; une adresse et un port donn&eacute;s, il s&eacute;lectionne
+            le circuit le plus r&eacute;cemment cr&eacute;&eacute;, ou en
+            cr&eacute;e un s’il n’y en a aucun. Il choisit ensuite noeud de
+            sortie sur le circuit, qui sera la plupart du temps le dernier noeud
+            du circuit. Le proxy ouvre le stream en envoyant une cellule relai
+            de type « begin » au noeud de sortie, en cr&eacute;ant un nouveau
+            <i>streamID</i>. Une fois connect&eacute; &agrave; l’h&ocirc;te
+            distant, le noeud de sortie envoie &agrave; l’onion proxy une
+            cellule relai de type « connected ».<br />
+            Lorsque le stream doit &ecirc;tre ferm&eacute;, le proxy utilise un
+            « two-step handshake ». Si une erreur survient lors de la fermeture
+            de stream, le noeud o&ugrave; l’erreur est survenue envoie une
+            cellule relai de type « teardown cell » &agrave; la cellule
+            suivante. Sinon, il envoie une cellule relai de type « end ».
+          </p>
+          <h3>Pour r&eacute;sumer</h3>
+          <p>
+            Alice r&eacute;cup&egrave;re d'abord une liste de noeuds gr&acirc;ce
+            &agrave; un « directory server » du r&eacute;seau Tor. Sur le
+            sch&eacute;ma ci-dessous, les noeuds sélectionn&eacute;s sont
+            marqu&eacute;s par une croix verte.
+          </p>
+          <div class="article-img-container">
+            <img src="tor/recap1.png" />
+          </div>
+          <p>
+            Lorsqu’elle veut &eacute;tablir une connexion &agrave; un serveur,
+            elle choisit un chemin al&eacute;atoire pour acc&eacute;der &agrave;
+            ce serveur. La connexion passera par tous ces noeuds, chacun
+            apportant une couche de chiffrage suppl&eacute;mentaire.
+          </p>
+          <div class="article-img-container">
+            <img src="tor/recap2.png" />
+          </div>
+          <p>
+            Apr&egrave;s environ 10 minutes, Alice g&eacute;n&egrave;re un
+            nouveau chemin.
+          </p>
+          <div class="article-img-container">
+            <img src="tor/recap3.png" />
+          </div>
+        </div>
+        <h3>Bibliographie</h3>
+        <div class="article-bib">
+          <a href="https://www.torproject.org/about/history/" target="_blank"
+            >https://www.torproject.org/about/history/</a
+          >
+          <a
+            href="https://2019.www.torproject.org/docs/faq.html.en"
+            target="_blank"
+            >https://2019.www.torproject.org/docs/faq.html.en</a
+          >
+          <a
+            href="https://2019.www.torproject.org/about/overview.html.en"
+            target="_blank"
+            >https://2019.www.torproject.org/about/overview.html.en</a
+          >
+          <a
+            href="https://www.usenix.org/legacy/events/sec04/tech/full_papers/dingledine/dingledine.pdf"
+            target="_blank"
+            >https://www.usenix.org/legacy/events/sec04/tech/full_papers/dingledine/dingledine.pdf</a
+          >
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright <i class="far fa-copyright"></i> 2021 - Joseph Pellegrini</p>
+    </footer>
+    <script>
+      var sm_menu_open = document.getElementById("small-nav-open"),
+        sm_menu_close = document.getElementById("small-nav-close"),
+        menu = document.getElementById("main-nav-cnt"),
+        sm_menu_opened = false;
+
+      function toggle_sm_menu() {
+        if (sm_menu_opened) {
+          menu.style.display = "none";
+          sm_menu_open.style.display = "flex";
+          sm_menu_close.style.display = "none";
+          sm_menu_opened = false;
+        } else {
+          menu.style.display = "flex";
+          sm_menu_open.style.display = "none";
+          sm_menu_close.style.display = "flex";
+          sm_menu_opened = true;
+        }
+      }
+    </script>
+  </body>
+</html>
