@@ -178,11 +178,12 @@
             chiffrer l’information d’une partie &agrave; l’autre du
             r&eacute;seau. Ces noeuds, &eacute;galement appel&eacute;s routers,
             communiquent entre eux via des connexions TLS utilisant des
-            cl&eacute;s &eacute;ph&eacute;m&egrave;res, celles-ci permettant de
-            s’assurer que les donn&eacute;es restent int&egrave;gres et
-            confidentielles. Les donn&eacute;es transitent d’un client vers un
-            serveur en empruntant un circuit cr&eacute;&eacute; par « l’onion
-            proxy » du client, g&eacute;n&eacute;ralement le navigateur Tor.<br />
+            cl&eacute;s &eacute;ph&eacute;m&egrave;res, ces derni&egrave;res
+            permettant de s’assurer que les donn&eacute;es restent
+            int&egrave;gres et confidentielles. Les donn&eacute;es transitent
+            d’un client vers un serveur en empruntant un circuit
+            cr&eacute;&eacute; par « l’onion proxy » du client,
+            g&eacute;n&eacute;ralement le navigateur Tor.<br />
             &Eacute;tudions le processus de transit de l’information plus en
             d&eacute;tail.
           </p>
@@ -217,7 +218,7 @@
           </div>
           <p>Les cellules relais ont toutes une commande « Relay ».</p>
           <p>
-            En outre, les cellules relai ont un en-t&ecirc;te
+            En outre, les cellules relais ont un en-t&ecirc;te
             suppl&eacute;mentaire contenant : <br />
             -Un identifiant de stream, ces derniers pouvant &ecirc;tre
             multiplex&eacute;s sur un m&ecirc;me circuit. <br />
@@ -242,7 +243,7 @@
             -<i>Relay sendme</i>, utilis&eacute; pour le contr&ocirc;le des
             embouteillages sur un noeud.<br />
             -<i>Relay drop</i>, utilis&eacute; pour impl&eacute;menter des
-            communications de tests &agrave; longue port&eacute;e
+            communications de tests &agrave; longue port&eacute;e.
           </p>
           <div class="article-img-container">
             <img src="tor/relay_cell_header.png" alt="relay cell header" />
@@ -260,15 +261,16 @@
             Ainsi, si le navigateur TOR d’un utilisateur ouvre plusieurs pages
             web, ces derni&egrave;res utiliseront le m&ecirc;me circuit. Ce
             circuit est r&eacute;initialis&eacute; fr&eacute;quemment pour
-            garantir une &eacute;viter de nuire &agrave; l’exp&eacute;rience
-            utilisateur.
+            garantir une s&eacute;curit&eacute; optimale, et en
+            arri&egrave;re-plan, pour &eacute;viter de nuire &agrave;
+            l’exp&eacute;rience utilisateur.
           </p>
           <p>
             Les circuits sont cr&eacute;&eacute;s de mani&egrave;re
             incr&eacute;mentielle, c’est-&agrave;-dire en n&eacute;gociant une
             cl&eacute; avec chaque noeud du circuit, un « saut » &agrave; la
             fois. <br />Supposons qu’Alice souhaite cr&eacute;er un nouveau
-            circuit, dont elle a choisi les noeuds le composant.<br />
+            circuit, dont elle a choisi les noeuds.<br />
             Alice envoie tout d’abord une cellule de type « create » au premier
             noeud sur son chemin, appel&eacute; Bob, et choisit un « circID »
             (pour rappel, identifiant de circuit) non utilis&eacute;.<br />
@@ -368,7 +370,7 @@
             Lorsque l’onion proxy souhaite &eacute;tablir une connexion TCP
             &agrave; une adresse et un port donn&eacute;s, il s&eacute;lectionne
             le circuit le plus r&eacute;cemment cr&eacute;&eacute;, ou en
-            cr&eacute;e un s’il n’y en a aucun. Il choisit ensuite noeud de
+            cr&eacute;e un s’il n’y en a aucun. Il choisit ensuite le noeud de
             sortie sur le circuit, qui sera la plupart du temps le dernier noeud
             du circuit. Le proxy ouvre le stream en envoyant une cellule relai
             de type « begin » au noeud de sortie, en cr&eacute;ant un nouveau
