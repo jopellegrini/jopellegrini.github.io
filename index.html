@@ -1,552 +1,517 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Joseph Pellegrini</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css" />
-    <script
-      src="https://kit.fontawesome.com/798cb114ae.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="scripts/smooth_scroll.js"></script>
-  </head>
-  <body>
-    <header class="main-header full-width">
-      <nav class="main-nav" id="main-nav-cnt">
-        <div>
-          <a class="main-nav__a" href="">Joseph Pellegrini</a>
-        </div>
-        <ul class="main-ul">
-          <li class="main-ul__li">
-            <a class="main-nav__a" href="#education" onclick="toggle_sm_menu()"
-              >Formation</a
-            >
-          </li>
-          <li class="main-ul__li">
-            <a class="main-nav__a" href="#experience" onclick="toggle_sm_menu()"
-              >Exp&eacute;rience</a
-            >
-          </li>
-          <li class="main-ul__li">
-            <a class="main-nav__a" href="#skills" onclick="toggle_sm_menu()"
-              >Comp&eacute;tences</a
-            >
-          </li>
-          <li class="main-ul__li">
-            <a class="main-nav__a" href="#projects" onclick="toggle_sm_menu()"
-              >Projets</a
-            >
-          </li>
-          <li class="main-ul__li">
-            <a class="main-nav__a" href="#contact" onclick="toggle_sm_menu()"
-              >Contact</a
-            >
-          </li>
-        </ul>
-        <div>
-          <a class="main-nav__a" href="blog.html">Blog</a>
-        </div>
-      </nav>
-      <div
-        class="small-nav-toggle"
-        id="main-nav-toggler"
-        onclick="toggle_sm_menu()"
-      >
-        <img
-          src="images/icons/menu.svg"
-          alt="menu"
-          class="small-nav-toggle__btn"
-          id="small-nav-open"
-        />
-        <img
-          src="images/icons/close.svg"
-          alt="close menu"
-          class="small-nav-toggle__btn"
-          id="small-nav-close"
-        />
-      </div>
-    </header>
-    <main>
-      <div class="top-section full-width">
-        <div class="top-section-back">
-          <div class="top-section-back-right"></div>
-        </div>
-        <div class="top-section-right">
-          <h1 class="top-section__h1">Joseph Pellegrini</h1>
-          <p class="top-section__p">
-            &Eacute;tudiant en deuxi&egrave;me ann&eacute;e de cycle
-            ing&eacute;nieur &agrave; EPITA Paris
-          </p>
-        </div>
-      </div>
-      <div class="main-section centered">
-        <div>
-          <div class="main-section__title-container">
-            <a class="anchor" id="education"></a>
-            <h2 class="main-section__title">Formation</h2>
-          </div>
-          <div class="main-section__sub">
-            <div class="main-section__education">
-              <p class="main-section__education__title">
-                Dipl&ocirc;me d'ing&eacute;nieur en informatique
-              </p>
-              <p>
-                <b
-                  >EPITA (&Eacute;cole pour l'informatique et les techniques
-                  avanc&eacute;es)</b
-                >
-              </p>
-              <p class="main-section__education__date">2018 - 2023</p>
-            </div>
-            <div class="main-section__education">
-              <p class="main-section__education__title">
-                Baccalaur&eacute;at scientifique
-              </p>
-              <p>Sp&eacute;cialit&eacute; Physique-Chimie - Mention bien</p>
-              <p><b>Coll&egrave;ge-Lyc&eacute;e Saint-Michel de Picpus</b></p>
-              <p class="main-section__education__date">2011 - 2018</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main-section__title-container">
-            <a class="anchor" id="experience"></a>
-            <h2 class="main-section__title">Exp&eacute;rience</h2>
-          </div>
-          <div class="main-section__sub">
-            <div class="main-section__experience">
-              <p class="main-section__experience__title">
-                D&eacute;veloppeur Full Stack
-              </p>
-              <p><b>m19</b></p>
-              <p>
-                - Développement d'une application web permettant aux vendeurs
-                Amazon de gérer et paramétrer leurs campagnes publicitaires, et
-                d'obtenir différentes statistiques relatives à leur activité sur
-                Amazon (Java, Angular, HTML, CSS).
-              </p>
-              <p>
-                - Conception d'algorithmes permettant l'agrégation efficace
-                d'importants volumes de données, afin d'assurer des performances
-                optimales au sein de l'application.
-              </p>
-              <p class="main-section__experience__date">
-                septembre 2021 - janvier 2022
-              </p>
-            </div>
-            <div class="main-section__experience">
-              <p class="main-section__experience__title">
-                D&eacute;veloppeur web
-              </p>
-              <p><b>neostory</b></p>
-              <p>
-                D&eacute;veloppement web (HTML, CSS, JS, PHP) : modifications et
-                am&eacute;liorations apport&eacute;es &agrave; diff&eacute;rents
-                sites.
-              </p>
-              <p class="main-section__experience__date">
-                juin 2019 - juillet 2019
-              </p>
-            </div>
-            <div class="main-section__experience">
-              <p class="main-section__experience__title">
-                D&eacute;veloppeur web
-              </p>
-              <p><b>BeCycle</b></p>
-              <p>
-                Développement d'une plateforme de location de vélos entre
-                particuliers.
-              </p>
-              <p class="main-section__experience__date">
-                mars 2017 - juin 2019
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main-section__title-container">
-            <a class="anchor" id="skills"></a>
-            <h2 class="main-section__title">Comp&eacute;tences</h2>
-          </div>
-          <div class="main-section__sub">
-            <div class="main-section__skills">
-              <h3 class="main-section__skills__sub-title">Informatique</h3>
-              <div class="main-section__skills__it">
-                <div class="main-section__skills__it__section">
-                  <p>Langages</p>
-                  <div class="main-section__skills__it__elt-ctn">
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/cpp.svg" alt="c++" />
-                      <p>C++</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/c.svg" alt="c" />
-                      <p>C</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/java.svg" alt="java" />
-                      <p>Java</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/python.svg" alt="python" />
-                      <p>Python</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/csharp.svg" alt="c#" />
-                      <p>C#</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/sql.svg" alt="sql" />
-                      <p>SQL</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/php.svg" alt="php" />
-                      <p>PHP</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/html5.svg" alt="html" />
-                      <p>HTML</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/css3.svg" alt="css" />
-                      <p>CSS</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/js.svg" alt="javascript" />
-                      <p>Javascript</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img
-                        src="images/icons/processor.svg"
-                        alt="x86 assembly"
-                      />
-                      <p>x86 assembly</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-section__skills__it__section">
-                  <p>Syst&egrave;mes d'exploitation</p>
-                  <div class="main-section__skills__it__elt-ctn">
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/linux.svg" alt="unix" />
-                      <p>Unix/Linux</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/windows.svg" alt="windows" />
-                      <p>Windows</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-section__skills__it__section">
-                  <p>Autres</p>
-                  <div class="main-section__skills__it__elt-ctn">
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/git.svg" alt="git" />
-                      <p>Git</p>
-                    </div>
-                    <div class="main-section__skills__it__elt">
-                      <img src="images/icons/pdf.svg" alt="latex" />
-                      <p>Latex</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h3 class="main-section__skills__sub-title">Langues</h3>
-              <div class="main-section__skills__lang">
-                <div class="main-section__skills__lang__elt">
-                  <img src="images/icons/france.svg" alt="france" />
-                  <p>Fran&ccedil;ais : langue natale</p>
-                </div>
-                <div class="main-section__skills__lang__elt">
-                  <img src="images/icons/uk.svg" alt="uk" />
-                  <p>Anglais : comp&eacute;tence professionnelle (C1)</p>
-                </div>
-                <div class="main-section__skills__lang__elt">
-                  <img src="images/icons/spain.svg" alt="spain" />
-                  <p>
-                    Espagnol : comp&eacute;tence professionnelle limit&eacute;e
-                    (B2)
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main-section__title-container">
-            <a class="anchor" id="projects"></a>
-            <h2 class="main-section__title">Projets</h2>
-          </div>
-          <div class="main-section__sub">
-            <div class="main-section__project">
-              <p class="main-section__project__title">MyIDE</p>
-              <p class="main-section__project__date">
-                juin 2021 - juillet 2021 (6 semaines)
-              </p>
-              <p>
-                R&eacute;alisation d'un IDE en Java (Swing). &Eacute;dition de
-                fichiers, gestion de la structure du projet, intégration GIT et
-                Maven, changement de th&egrave;me, etc.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/java.svg" alt="java" />
-                  <p>Java</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">Tiger</p>
-              <p class="main-section__project__date">
-                f&eacute;vrier 2021 - avril 2021 (7 semaines)
-              </p>
-              <p>
-                Impl&eacute;mentation d'un compilateur pour le langage
-                <a
-                  href="https://www.lrde.epita.fr/~tiger/tiger.html"
-                  target="_blank"
-                  >Tiger <i class="fas fa-external-link-alt"></i
-                ></a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                en C++.
-              </p>
-              <p>
-                Lexer, parser, construction d'AST, binding, type-checking,
-                traduction vers une repr&eacute;sentation interm&eacute;diaire
-                de haut niveau.
-              </p>
-              <p>
-                Sujet complet disponible via
-                <a
-                  href="https://assignments.lrde.epita.fr/index.html"
-                  target="_blank"
-                  >ce lien <i class="fas fa-external-link-alt"></i
-                ></a>
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/cpp.svg" alt="c++" />
-                  <p>C++</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">Chess</p>
-              <p class="main-section__project__date">mars 2021 (4 semaines)</p>
-              <p>
-                Impl&eacute;mentation d'un jeu d'&eacute;checs int&eacute;grant
-                une intelligence artificielle en C++
-              </p>
-              <p>
-                Repr&eacute;sentation sous forme de bitboards et algorithme
-                minimax avec alpha-beta pruning.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/cpp.svg" alt="c++" />
-                  <p>C++</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">JWS</p>
-              <p class="main-section__project__date">avril 2021 (1 semaine)</p>
-              <p>
-                Impl&eacute;mentation d'une API rest suivant une architecture en
-                couches.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/java.svg" alt="java" />
-                  <p>Java</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">Librubrik</p>
-              <p class="main-section__project__date">janvier 2021 (2 jours)</p>
-              <p>R&eacute;alisation d'un solveur de rubik's cube.</p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/cpp.svg" alt="c++" />
-                  <p>C++</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">42sh</p>
-              <p class="main-section__project__date">
-                novembre 2020 - d&eacute;cembre 2020 (4 semaines)
-              </p>
-              <p>
-                Impl&eacute;mentation d'un shell conforme &agrave; la norme
-                posix.
-              </p>
-              <p>
-                Builtins (cd, alias, echo, source, export, exit) et
-                interpr&eacute;tation du language shell (lexer, parser,
-                ex&eacute;cution).
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/c.svg" alt="c" />
-                  <p>C</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">Malloc</p>
-              <p class="main-section__project__date">
-                novembre 2020 (1 semaine)
-              </p>
-              <p>
-                Impl&eacute;mentation d'une biblioth&egrave;que d'allocation de
-                m&eacute;moire.
-              </p>
-              <p>
-                Utilisation de l'appel syst&egrave;me <b>mmap</b>. Algorithme de
-                m&eacute;tadonn&eacute;es externes.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/c.svg" alt="c" />
-                  <p>C</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">Minimake</p>
-              <p class="main-section__project__date">
-                octobre 2020 (1 semaine)
-              </p>
-              <p>
-                Impl&eacute;mentation d'une version minimaliste de l'outil make.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/c.svg" alt="c" />
-                  <p>C</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">MyFind</p>
-              <p class="main-section__project__date">
-                octobre 2020 (1 semaine)
-              </p>
-              <p>
-                Impl&eacute;mentation d'une version simplifi&eacute;e de la
-                commande UNIX 'find'.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/c.svg" alt="c" />
-                  <p>C</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">OCR</p>
-              <p class="main-section__project__date">
-                novembre 2019 - d&eacute;cembre 2019 (2 mois)
-              </p>
-              <p>
-                Impl&eacute;mentation d'un syst&egrave;me de reconnaissance
-                optique de caract&egrave;res.
-              </p>
-              <p>
-                Projet disponible sur
-                <a href="https://github.com/jopellegrini/OCR" target="_blank"
-                  >GitHub <i class="fas fa-external-link-alt"></i></a
-                >.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/c.svg" alt="c" />
-                  <p>C</p>
-                </div>
-              </div>
-            </div>
-            <div class="main-section__project">
-              <p class="main-section__project__title">Sirius</p>
-              <p class="main-section__project__date">
-                mai 2019 - juin 2019 (2 mois)
-              </p>
-              <p>
-                R&eacute;alisation d'un jeu vid&eacute;o sous le moteur de jeu
-                Unity.
-              </p>
-              <div class="main-section__project__tech-ctn">
-                <div class="main-section__project__tech">
-                  <img src="images/icons/csharp.svg" alt="csharp" />
-                  <p>C#</p>
-                </div>
-              </div>
-            </div>
+  <title>Joseph Pellegrini</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="https://kit.fontawesome.com/798cb114ae.js" crossorigin="anonymous"></script>
+  <script src="scripts/smooth_scroll.js"></script>
+</head>
+
+<body>
+  <header class="main-header full-width">
+    <nav class="main-nav" id="main-nav-cnt">
+      <div>
+        <a class="main-nav__a" href="">Joseph Pellegrini</a>
+      </div>
+      <ul class="main-ul">
+        <li class="main-ul__li">
+          <a class="main-nav__a" href="#experience" onclick="toggle_sm_menu()">Exp&eacute;rience</a>
+        </li>
+        <li class="main-ul__li">
+          <a class="main-nav__a" href="#education" onclick="toggle_sm_menu()">Formation</a>
+        </li>
+        <li class="main-ul__li">
+          <a class="main-nav__a" href="#skills" onclick="toggle_sm_menu()">Comp&eacute;tences</a>
+        </li>
+        <li class="main-ul__li">
+          <a class="main-nav__a" href="#projects" onclick="toggle_sm_menu()">Projets</a>
+        </li>
+        <li class="main-ul__li">
+          <a class="main-nav__a" href="#contact" onclick="toggle_sm_menu()">Contact</a>
+        </li>
+      </ul>
+      <div>
+        <a class="main-nav__a" href="blog.html">Blog</a>
+      </div>
+    </nav>
+    <div class="small-nav-toggle" id="main-nav-toggler" onclick="toggle_sm_menu()">
+      <img src="images/icons/menu.svg" alt="menu" class="small-nav-toggle__btn" id="small-nav-open" />
+      <img src="images/icons/close.svg" alt="close menu" class="small-nav-toggle__btn" id="small-nav-close" />
+    </div>
+  </header>
+  <main>
+    <div class="top-section full-width">
+      <div class="top-section-back">
+        <div class="top-section-back-right"></div>
+      </div>
+      <div class="top-section-right">
+        <h1 class="top-section__h1">Joseph Pellegrini</h1>
+        <p class="top-section__p">
+          Co-founder & CTO - Partimo
+        </p>
+      </div>
+    </div>
+    <div class="main-section centered">
+      <div>
+        <div class="main-section__title-container">
+          <a class="anchor" id="experience"></a>
+          <h2 class="main-section__title">Exp&eacute;rience</h2>
+        </div>
+        <div class="main-section__sub">
+          <div class="main-section__experience">
+            <p class="main-section__experience__title">
+              Co-founder & CTO
+            </p>
+            <p><b>Partimo</b></p>
+            <p>
+              Partimo est une plateforme destinée aux professionnels de l'immobilier, dont le but est de faciliter le
+              partage de mandats.
+            </p>
+            <p class="main-section__experience__date">
+              mai 2022 - aujourd’hui
+            </p>
+          </div>
+          <div class="main-section__experience">
+            <p class="main-section__experience__title">
+              D&eacute;veloppeur Full Stack
+            </p>
+            <p><b>m19</b></p>
+            <p>
+              - Développement d'une application web permettant aux vendeurs
+              Amazon de gérer et paramétrer leurs campagnes publicitaires, et
+              d'obtenir différentes statistiques relatives à leur activité sur
+              Amazon (Java, Angular, HTML, CSS).
+            </p>
+            <p>
+              - Conception d'algorithmes permettant l'agrégation efficace
+              d'importants volumes de données, afin d'assurer des performances
+              optimales au sein de l'application.
+            </p>
+            <p class="main-section__experience__date">
+              septembre 2021 - janvier 2022
+            </p>
+          </div>
+          <div class="main-section__experience">
+            <p class="main-section__experience__title">
+              D&eacute;veloppeur web
+            </p>
+            <p><b>neostory</b></p>
+            <p>
+              D&eacute;veloppement web (HTML, CSS, JS, PHP) : modifications et
+              am&eacute;liorations apport&eacute;es &agrave; diff&eacute;rents
+              sites.
+            </p>
+            <p class="main-section__experience__date">
+              juin 2019 - juillet 2019
+            </p>
+          </div>
+          <div class="main-section__experience">
+            <p class="main-section__experience__title">
+              D&eacute;veloppeur web
+            </p>
+            <p><b>BeCycle</b></p>
+            <p>
+              Développement d'une plateforme de location de vélos entre
+              particuliers.
+            </p>
+            <p class="main-section__experience__date">
+              mars 2017 - juin 2019
+            </p>
           </div>
         </div>
-        <div>
-          <div class="main-section__title-container">
-            <a class="anchor" id="contact"></a>
-            <h2 class="main-section__title">Contact</h2>
+      </div>
+      <div>
+        <div class="main-section__title-container">
+          <a class="anchor" id="education"></a>
+          <h2 class="main-section__title">Formation</h2>
+        </div>
+        <div class="main-section__sub">
+          <div class="main-section__education">
+            <p class="main-section__education__title">
+              Dipl&ocirc;me d'ing&eacute;nieur en informatique
+            </p>
+            <p>
+              <b>EPITA (&Eacute;cole pour l'informatique et les techniques
+                avanc&eacute;es)</b>
+            </p>
+            <p class="main-section__education__date">2018 - 2023</p>
           </div>
-          <div class="main-section__sub">
-            <div class="main-section__contact">
-              <a
-                class="main-section__contact__link"
-                href="mailto:jopellegrini2@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                class="main-section__contact__link"
-                target="_blank"
-                href="https://www.linkedin.com/in/joseph-pellegrini/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a
-                class="main-section__contact__link"
-                target="_blank"
-                href="https://github.com/jopellegrini"
-                ><i class="fab fa-github"></i
-              ></a>
+          <div class="main-section__education">
+            <p class="main-section__education__title">
+              Baccalaur&eacute;at scientifique
+            </p>
+            <p>Sp&eacute;cialit&eacute; Physique-Chimie - Mention bien</p>
+            <p><b>Coll&egrave;ge-Lyc&eacute;e Saint-Michel de Picpus</b></p>
+            <p class="main-section__education__date">2011 - 2018</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="main-section__title-container">
+          <a class="anchor" id="skills"></a>
+          <h2 class="main-section__title">Comp&eacute;tences</h2>
+        </div>
+        <div class="main-section__sub">
+          <div class="main-section__skills">
+            <h3 class="main-section__skills__sub-title">Informatique</h3>
+            <div class="main-section__skills__it">
+              <div class="main-section__skills__it__section">
+                <p>Langages / frameworks</p>
+                <div class="main-section__skills__it__elt-ctn">
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/cpp.svg" alt="c++" />
+                    <p>C++</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/c.svg" alt="c" />
+                    <p>C</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/java.svg" alt="java" />
+                    <p>Java</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/python.svg" alt="python" />
+                    <p>Python</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/csharp.svg" alt="c#" />
+                    <p>C#</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/sql.svg" alt="sql" />
+                    <p>SQL</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/php.svg" alt="php" />
+                    <p>PHP</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/html5.svg" alt="html" />
+                    <p>HTML</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/css3.svg" alt="css" />
+                    <p>CSS</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/js.svg" alt="javascript" />
+                    <p>Javascript</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/angular.svg" alt="Angular" />
+                    <p>Angular</p>
+                  </div>
+                </div>
+              </div>
+              <div class="main-section__skills__it__section">
+                <p>Syst&egrave;mes d'exploitation</p>
+                <div class="main-section__skills__it__elt-ctn">
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/linux.svg" alt="unix" />
+                    <p>Unix/Linux</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/windows.svg" alt="windows" />
+                    <p>Windows</p>
+                  </div>
+                </div>
+              </div>
+              <div class="main-section__skills__it__section">
+                <p>Autres</p>
+                <div class="main-section__skills__it__elt-ctn">
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/git.svg" alt="git" />
+                    <p>Git</p>
+                  </div>
+                  <div class="main-section__skills__it__elt">
+                    <img src="images/icons/pdf.svg" alt="latex" />
+                    <p>Latex</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="main-section__skills__sub-title">Langues</h3>
+            <div class="main-section__skills__lang">
+              <div class="main-section__skills__lang__elt">
+                <img src="images/icons/france.svg" alt="france" />
+                <p>Fran&ccedil;ais : langue natale</p>
+              </div>
+              <div class="main-section__skills__lang__elt">
+                <img src="images/icons/uk.svg" alt="uk" />
+                <p>Anglais : comp&eacute;tence professionnelle (C1)</p>
+              </div>
+              <div class="main-section__skills__lang__elt">
+                <img src="images/icons/spain.svg" alt="spain" />
+                <p>
+                  Espagnol : comp&eacute;tence professionnelle limit&eacute;e
+                  (B2)
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <p>Copyright <i class="far fa-copyright"></i> 2021 - Joseph Pellegrini</p>
-    </footer>
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
+      <div>
+        <div class="main-section__title-container">
+          <a class="anchor" id="projects"></a>
+          <h2 class="main-section__title">Projets</h2>
+        </div>
+        <div class="main-section__sub">
+          <div class="main-section__project">
+            <p class="main-section__project__title">MyIDE</p>
+            <p class="main-section__project__date">
+              juin 2021 - juillet 2021 (6 semaines)
+            </p>
+            <p>
+              R&eacute;alisation d'un IDE en Java (Swing). &Eacute;dition de
+              fichiers, gestion de la structure du projet, intégration GIT et
+              Maven, changement de th&egrave;me, etc.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/java.svg" alt="java" />
+                <p>Java</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">Tiger</p>
+            <p class="main-section__project__date">
+              f&eacute;vrier 2021 - avril 2021 (7 semaines)
+            </p>
+            <p>
+              Impl&eacute;mentation d'un compilateur pour le langage
+              <a href="https://www.lrde.epita.fr/~tiger/tiger.html" target="_blank">Tiger <i
+                  class="fas fa-external-link-alt"></i></a>
+
+              en C++.
+            </p>
+            <p>
+              Lexer, parser, construction d'AST, binding, type-checking,
+              traduction vers une repr&eacute;sentation interm&eacute;diaire
+              de haut niveau.
+            </p>
+            <p>
+              Sujet complet disponible via
+              <a href="https://assignments.lrde.epita.fr/index.html" target="_blank">ce lien <i
+                  class="fas fa-external-link-alt"></i></a>
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/cpp.svg" alt="c++" />
+                <p>C++</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">Chess</p>
+            <p class="main-section__project__date">mars 2021 (4 semaines)</p>
+            <p>
+              Impl&eacute;mentation d'un jeu d'&eacute;checs int&eacute;grant
+              une intelligence artificielle en C++
+            </p>
+            <p>
+              Repr&eacute;sentation sous forme de bitboards et algorithme
+              minimax avec alpha-beta pruning.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/cpp.svg" alt="c++" />
+                <p>C++</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">JWS</p>
+            <p class="main-section__project__date">avril 2021 (1 semaine)</p>
+            <p>
+              Impl&eacute;mentation d'une API rest suivant une architecture en
+              couches.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/java.svg" alt="java" />
+                <p>Java</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">Librubrik</p>
+            <p class="main-section__project__date">janvier 2021 (2 jours)</p>
+            <p>R&eacute;alisation d'un solveur de rubik's cube.</p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/cpp.svg" alt="c++" />
+                <p>C++</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">42sh</p>
+            <p class="main-section__project__date">
+              novembre 2020 - d&eacute;cembre 2020 (4 semaines)
+            </p>
+            <p>
+              Impl&eacute;mentation d'un shell conforme &agrave; la norme
+              posix.
+            </p>
+            <p>
+              Builtins (cd, alias, echo, source, export, exit) et
+              interpr&eacute;tation du language shell (lexer, parser,
+              ex&eacute;cution).
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/c.svg" alt="c" />
+                <p>C</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">Malloc</p>
+            <p class="main-section__project__date">
+              novembre 2020 (1 semaine)
+            </p>
+            <p>
+              Impl&eacute;mentation d'une biblioth&egrave;que d'allocation de
+              m&eacute;moire.
+            </p>
+            <p>
+              Utilisation de l'appel syst&egrave;me <b>mmap</b>. Algorithme de
+              m&eacute;tadonn&eacute;es externes.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/c.svg" alt="c" />
+                <p>C</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">Minimake</p>
+            <p class="main-section__project__date">
+              octobre 2020 (1 semaine)
+            </p>
+            <p>
+              Impl&eacute;mentation d'une version minimaliste de l'outil make.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/c.svg" alt="c" />
+                <p>C</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">MyFind</p>
+            <p class="main-section__project__date">
+              octobre 2020 (1 semaine)
+            </p>
+            <p>
+              Impl&eacute;mentation d'une version simplifi&eacute;e de la
+              commande UNIX 'find'.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/c.svg" alt="c" />
+                <p>C</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">OCR</p>
+            <p class="main-section__project__date">
+              novembre 2019 - d&eacute;cembre 2019 (2 mois)
+            </p>
+            <p>
+              Impl&eacute;mentation d'un syst&egrave;me de reconnaissance
+              optique de caract&egrave;res.
+            </p>
+            <p>
+              Projet disponible sur
+              <a href="https://github.com/jopellegrini/OCR" target="_blank">GitHub <i
+                  class="fas fa-external-link-alt"></i></a>.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/c.svg" alt="c" />
+                <p>C</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-section__project">
+            <p class="main-section__project__title">Sirius</p>
+            <p class="main-section__project__date">
+              mai 2019 - juin 2019 (2 mois)
+            </p>
+            <p>
+              R&eacute;alisation d'un jeu vid&eacute;o sous le moteur de jeu
+              Unity.
+            </p>
+            <div class="main-section__project__tech-ctn">
+              <div class="main-section__project__tech">
+                <img src="images/icons/csharp.svg" alt="csharp" />
+                <p>C#</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="main-section__title-container">
+          <a class="anchor" id="contact"></a>
+          <h2 class="main-section__title">Contact</h2>
+        </div>
+        <div class="main-section__sub">
+          <div class="main-section__contact">
+            <a class="main-section__contact__link" href="mailto:jopellegrini2@gmail.com"><i
+                class="fas fa-envelope"></i></a>
+            <a class="main-section__contact__link" target="_blank"
+              href="https://www.linkedin.com/in/joseph-pellegrini/"><i class="fab fa-linkedin"></i></a>
+            <a class="main-section__contact__link" target="_blank" href="https://github.com/jopellegrini"><i
+                class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Copyright <i class="far fa-copyright"></i> 2021 - Joseph Pellegrini</p>
+  </footer>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((elem) => {
+      elem.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(elem.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
         });
       });
+    });
 
-      var sm_menu_open = document.getElementById("small-nav-open"),
-        sm_menu_close = document.getElementById("small-nav-close"),
-        menu = document.getElementById("main-nav-cnt"),
+    var sm_menu_open = document.getElementById("small-nav-open"),
+      sm_menu_close = document.getElementById("small-nav-close"),
+      menu = document.getElementById("main-nav-cnt"),
+      sm_menu_opened = false;
+
+    function toggle_sm_menu() {
+      if (sm_menu_opened) {
+        menu.style.display = "none";
+        sm_menu_open.style.display = "flex";
+        sm_menu_close.style.display = "none";
         sm_menu_opened = false;
-
-      function toggle_sm_menu() {
-        if (sm_menu_opened) {
-          menu.style.display = "none";
-          sm_menu_open.style.display = "flex";
-          sm_menu_close.style.display = "none";
-          sm_menu_opened = false;
-        } else {
-          menu.style.display = "flex";
-          sm_menu_open.style.display = "none";
-          sm_menu_close.style.display = "flex";
-          sm_menu_opened = true;
-        }
+      } else {
+        menu.style.display = "flex";
+        sm_menu_open.style.display = "none";
+        sm_menu_close.style.display = "flex";
+        sm_menu_opened = true;
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>
