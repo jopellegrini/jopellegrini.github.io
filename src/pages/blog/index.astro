@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatDate } from "../../lib/date";
+import { SITE } from "../../site";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<BaseLayout title={`${SITE.name} - Blog`}>
+  <h1 class="blog-top-section__h1">Blog</h1>
+  {
+    posts.map((post) => (
+      <div class="blog-article-container">
+        <a class="blog-article-link" href={`/blog/${post.id}/`}>
+          <h2 class="blog-article-title">{post.data.title}</h2>
+          <p class="blog-article-desc">{post.data.description}</p>
+          <p class="blog-article-date">{formatDate(post.data.date)}</p>
+        </a>
+      </div>
+    ))
+  }
+</BaseLayout>
