@@ -1,0 +1,5 @@
+# @napi-rs/wasm-runtime accepts @emnapi 2.x prereleases as a peer, and pnpm resolves
+# to 2.0.0-beta.2, which crashes `astro check`. Pin the stable release.
+overrides:
+  "@emnapi/runtime": 1.11.3
+  "@emnapi/core": 1.11.3
