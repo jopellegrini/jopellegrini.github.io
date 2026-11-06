@@ -1,0 +1,10 @@
+- id: epita
+  title: Diplôme d'ingénieur en informatique
+  school: EPITA (École pour l'informatique et les techniques avancées)
+  period: 2018 - 2023
+
+- id: bac
+  title: Baccalauréat scientifique
+  details: Spécialité Physique-Chimie - Mention bien
+  school: Collège-Lycée Saint-Michel de Picpus
+  period: 2011 - 2018

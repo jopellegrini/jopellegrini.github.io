@@ -1,0 +1,29 @@
+- id: neostate
+  title: Co-founder & CTO
+  company: Neostate
+  description: |
+    Neostate est une plateforme destinée aux professionnels de l'immobilier, dont le but est de faciliter le partage de mandats.
+  period: mai 2022 - aujourd’hui
+
+- id: m19
+  title: Développeur Full Stack
+  company: m19
+  description: |
+    \- Développement d'une application web permettant aux vendeurs Amazon de gérer et paramétrer leurs campagnes publicitaires, et d'obtenir différentes statistiques relatives à leur activité sur Amazon (Java, Angular, HTML, CSS).
+
+    \- Conception d'algorithmes permettant l'agrégation efficace d'importants volumes de données, afin d'assurer des performances optimales au sein de l'application.
+  period: septembre 2021 - janvier 2022
+
+- id: neostory
+  title: Développeur web
+  company: neostory
+  description: |
+    Développement web (HTML, CSS, JS, PHP) : modifications et améliorations apportées à différents sites.
+  period: juin 2019 - juillet 2019
+
+- id: becycle
+  title: Développeur web
+  company: BeCycle
+  description: |
+    Développement d'une plateforme de location de vélos entre particuliers.
+  period: mars 2017 - juin 2019

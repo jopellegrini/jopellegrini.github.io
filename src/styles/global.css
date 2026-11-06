@@ -4,10 +4,14 @@
   box-sizing: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "roboto";
 
-  src: url("../fonts/roboto.ttf") format("truetype");
+  src: url("/fonts/roboto.ttf") format("truetype");
 }
 
 body {
@@ -156,7 +160,7 @@ a.anchor {
   width: 40%;
   height: 100%;
 
-  background-image: url("../images/top-back.png");
+  background-image: url("/images/top-back.png");
   background-size: cover;
   background-position: center;
 
@@ -378,8 +382,8 @@ h3 {
   border-radius: 4px;
 }
 
-.main-section__skills__it__elt > img,
-.main-section__project__tech > img {
+.main-section__skills__it__elt > svg,
+.main-section__project__tech > svg {
   width: 1.6em;
   height: auto;
 }
@@ -401,7 +405,7 @@ h3 {
   align-items: center;
 }
 
-.main-section__skills__lang__elt > img {
+.main-section__skills__lang__elt > svg {
   width: 2em;
   height: 2em;
   margin-right: 0.5em;
@@ -454,7 +458,7 @@ h3 {
   margin-right: 1em;
 }
 
-.main-section__contact__link > i {
+.main-section__contact__link > svg {
   vertical-align: super;
 }
 

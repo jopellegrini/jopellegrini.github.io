@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  class: "main-section__skills__it__elt" | "main-section__project__tech";
+  name: string;
+  icon: string;
+}
+
+const { class: className, name, icon } = Astro.props;
+---
+
+<div class={className}>
+  <Icon name={icon} aria-hidden="true" />{" "}<p>{name}</p>
+</div>

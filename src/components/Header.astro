@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon/components";
+import { SITE } from "../site";
+
+const links = [
+  { href: "/#experience", label: "Expérience" },
+  { href: "/#education", label: "Formation" },
+  { href: "/#skills", label: "Compétences" },
+  { href: "/#projects", label: "Projets" },
+  { href: "/#contact", label: "Contact" },
+];
+---
+
+<header class="main-header full-width">
+  <nav class="main-nav" id="main-nav-cnt">
+    <div>
+      <a class="main-nav__a" href="/">{SITE.name}</a>
+    </div>
+    <ul class="main-ul">
+      {
+        links.map(({ href, label }) => (
+          <li class="main-ul__li">
+            <a class="main-nav__a" href={href}>
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div>
+      <a class="main-nav__a" href="/blog/">Blog</a>
+    </div>
+  </nav>
+  <div class="small-nav-toggle" id="main-nav-toggler">
+    <Icon
+      name="menu"
+      size="2em"
+      class="small-nav-toggle__btn"
+      id="small-nav-open"
+      aria-label="menu"
+      role="img"
+    />
+    <Icon
+      name="close"
+      size="2em"
+      class="small-nav-toggle__btn"
+      id="small-nav-close"
+      aria-label="close menu"
+      role="img"
+    />
+  </div>
+</header>
+
+<script>
+  const menu = document.getElementById("main-nav-cnt")!;
+  const toggler = document.getElementById("main-nav-toggler")!;
+  const openIcon = document.getElementById("small-nav-open")!;
+  const closeIcon = document.getElementById("small-nav-close")!;
+  let opened = false;
+
+  function toggleMenu() {
+    opened = !opened;
+    menu.style.display = opened ? "flex" : "none";
+    openIcon.style.display = opened ? "none" : "flex";
+    closeIcon.style.display = opened ? "flex" : "none";
+  }
+
+  toggler.addEventListener("click", toggleMenu);
+  menu.querySelectorAll(".main-ul .main-nav__a").forEach((link) =>
+    link.addEventListener("click", () => {
+      if (opened) toggleMenu();
+    }),
+  );
+</script>
