@@ -7,7 +7,6 @@ export default defineConfig({
   site: "https://josephpellegrini.fr",
   integrations: [icon()],
   markdown: {
-    // Keep the original typography: no automatic curly quotes or dashes.
     processor: satteri({ features: { smartPunctuation: false } }),
   },
 });

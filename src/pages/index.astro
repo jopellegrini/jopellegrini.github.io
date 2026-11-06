@@ -1,0 +1,28 @@
+---
+import Contact from "../components/sections/Contact.astro";
+import Education from "../components/sections/Education.astro";
+import Experience from "../components/sections/Experience.astro";
+import Projects from "../components/sections/Projects.astro";
+import Skills from "../components/sections/Skills.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../site";
+---
+
+<BaseLayout>
+  <div class="top-section full-width">
+    <div class="top-section-back">
+      <div class="top-section-back-right"></div>
+    </div>
+    <div class="top-section-right">
+      <h1 class="top-section__h1">{SITE.name}</h1>
+      <p class="top-section__p">{SITE.headline}</p>
+    </div>
+  </div>
+  <div class="main-section centered">
+    <Experience />
+    <Education />
+    <Skills />
+    <Projects />
+    <Contact />
+  </div>
+</BaseLayout>

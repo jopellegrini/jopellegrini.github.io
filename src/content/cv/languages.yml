@@ -1,0 +1,11 @@
+- id: fr
+  icon: france
+  label: "Français : langue natale"
+
+- id: en
+  icon: uk
+  label: "Anglais : compétence professionnelle (C1)"
+
+- id: es
+  icon: spain
+  label: "Espagnol : compétence professionnelle limitée (B2)"

@@ -1,0 +1,10 @@
+---
+import { Icon } from "astro-icon/components";
+import { SITE } from "../site";
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <p>Copyright <Icon name="fa6-regular:copyright" aria-hidden="true" /> {`${year} - ${SITE.name}`}</p>
+</footer>
