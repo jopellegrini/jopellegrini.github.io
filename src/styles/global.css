@@ -250,17 +250,18 @@ a.anchor {
 
 .article-main-img-container img {
   max-width: 100%;
+  height: auto;
   margin: 1em 0;
 }
 
-.article-container > h2,
+.article-container h2,
 h3 {
   font-weight: bold;
 
   text-decoration: underline;
 }
 
-.article-container > h2 {
+.article-container h2 {
   font-size: 1.8em;
 }
 
@@ -281,9 +282,10 @@ h3 {
   width: 60%;
 }
 
-.article-img-container > img,
-.article-img-container-min > img {
+.article-img-container img,
+.article-img-container-min img {
   width: 100%;
+  height: auto;
 }
 
 .article-img-container > p,
