@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { getOrderedCollection } from '../../lib/collections';
+import Card from '../Card.astro';
 import SectionTitle from '../SectionTitle.astro';
 import TechBadge from '../TechBadge.astro';
 
@@ -10,30 +11,29 @@ const languages = await getOrderedCollection('languages');
 
 <div>
   <SectionTitle id="skills" title="Compétences" />
-  <div>
+  <div class="flex flex-col gap-4">
+    <h3 class="m-0 text-[1.17em] font-bold underline">Informatique</h3>
+    <div class="flex flex-col gap-2">
+      {groups.map(({ data }) => (
+        <Card class="p-4 flex flex-col gap-2">
+          <p>{data.title}</p>
+          <div class="flex flex-wrap gap-4">
+            {data.items.map((item) => (
+              <TechBadge {...item} />
+            ))}
+          </div>
+        </Card>
+      ))}
+    </div>
+
+    <h3 class="m-0 text-[1.17em] font-bold underline">Langues</h3>
     <div>
-      <h3 class="m-0 text-[1.17em] font-bold underline">Informatique</h3>
-      <div>
-        {groups.map(({ data }) => (
-          <div class="my-[1em] rounded-[3px] border border-line px-[0.5em]">
-            <p class="mt-[1em]">{data.title}</p>
-            <div class="flex flex-wrap">
-              {data.items.map((item) => (
-                <TechBadge {...item} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-      <h3 class="m-0 text-[1.17em] font-bold underline">Langues</h3>
-      <div>
-        {languages.map(({ data }) => (
-          <div class="flex items-center">
-            <Icon name={data.icon} class="mr-[0.5em] size-[2em]" aria-hidden="true" />
-            <p class="my-[1em]">{data.label}</p>
-          </div>
-        ))}
-      </div>
+      {languages.map(({ data }) => (
+        <div class="flex items-center">
+          <Icon name={data.icon} class="mr-[0.5em] size-[2em]" aria-hidden="true" />
+          <p class="my-[1em]">{data.label}</p>
+        </div>
+      ))}
     </div>
   </div>
 </div>

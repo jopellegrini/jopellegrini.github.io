@@ -1,6 +1,7 @@
 ---
 import { getOrderedCollection } from '../../lib/collections';
 import { renderMarkdown } from '../../lib/markdown';
+import DatedCard from '../DatedCard.astro';
 import SectionTitle from '../SectionTitle.astro';
 import TechBadge from '../TechBadge.astro';
 
@@ -9,18 +10,16 @@ const projects = await getOrderedCollection('projects');
 
 <div>
   <SectionTitle id="projects" title="Projets" />
-  <div>
+  <div class="grid gap-4 md:grid-cols-2">
     {projects.map(({ data }) => (
-      <div class="border-l-2 border-line pl-2.5">
-        <p class="mt-[1em] mb-1.25 text-[1.3em] font-bold">{data.title}</p>
-        <p class="m-0 text-[0.9em] text-muted">{data.period}</p>
-        <div class="[&>p]:my-[1em]" set:html={renderMarkdown(data.description)} />
-        <div class="flex">
+      <DatedCard title={data.title} period={data.period}>
+        <Fragment set:html={renderMarkdown(data.description)} />
+        <Fragment slot="footer">
           {data.tech.map((item) => (
             <TechBadge {...item} />
           ))}
-        </div>
-      </div>
+        </Fragment>
+      </DatedCard>
     ))}
   </div>
 </div>

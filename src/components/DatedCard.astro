@@ -1,0 +1,31 @@
+---
+import Card from './Card.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  period: string;
+}
+
+const { title, subtitle, period } = Astro.props;
+---
+
+<Card class="flex flex-col gap-3 p-5">
+  <header class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+    <div>
+      <h3 class="text-[1.3em] font-bold text-primary">{title}</h3>
+      {subtitle && <p class="font-medium">{subtitle}</p>}
+    </div>
+    <p class="text-[0.9em] text-muted">{period}</p>
+  </header>
+  {Astro.slots.has('default') && (
+    <div class="flex flex-col gap-2 empty:hidden">
+      <slot />
+    </div>
+  )}
+  {Astro.slots.has('footer') && (
+    <footer class="mt-auto flex flex-wrap gap-4">
+      <slot name="footer" />
+    </footer>
+  )}
+</Card>
