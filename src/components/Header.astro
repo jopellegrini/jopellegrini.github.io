@@ -13,8 +13,8 @@ const links = [
 
 <header class="group w-full">
   <input type="checkbox" id="nav-toggle" class="sr-only" aria-label="Menu" />
-  <nav class="fixed top-0 z-990 flex h-[3em] w-full items-center justify-between bg-primary text-[1.2em] text-white max-lg:hidden max-lg:h-auto max-lg:flex-col max-lg:text-center group-has-checked:max-lg:flex">
-    <div class="ml-[1em] max-lg:mt-[3em] max-lg:ml-0 max-lg:h-[2em]">
+  <nav class="fixed top-0 z-990 flex h-14 w-full items-center justify-between bg-primary text-xl text-white max-lg:hidden max-lg:h-auto max-lg:flex-col max-lg:text-center group-has-checked:max-lg:flex">
+    <div class="ml-5 max-lg:mt-14 max-lg:ml-0 max-lg:h-10">
       <a href="/">{SITE.name}</a>
     </div>
     <ul
@@ -22,18 +22,18 @@ const links = [
       onclick="document.getElementById('nav-toggle').checked = false"
     >
       {links.map(({ href, label }) => (
-        <li class="mx-[1em] max-lg:m-0 max-lg:h-[2em]">
+        <li class="mx-5 max-lg:m-0 max-lg:h-10">
           <a href={href}>{label}</a>
         </li>
       ))}
     </ul>
-    <div class="mr-[1em] max-lg:mr-0 max-lg:mb-[1em]">
+    <div class="mr-5 max-lg:mr-0 max-lg:mb-5">
       <a href="/blog/">Blog</a>
     </div>
   </nav>
   <label
     for="nav-toggle"
-    class="fixed top-0 z-999 m-[1em] box-content hidden cursor-pointer rounded-[0.4em] bg-primary p-[1em] transition-all duration-200 ease-[ease] hover:bg-primary-light max-lg:flex max-lg:h-[2em]"
+    class="fixed top-0 z-999 m-4 box-content hidden cursor-pointer rounded-md bg-primary p-4 transition-all duration-200 ease-in-out hover:bg-primary-light max-lg:flex max-lg:h-8"
   >
     <Icon name="menu" size="2em" class="group-has-checked:hidden" aria-hidden="true" />
     <Icon name="close" size="2em" class="hidden group-has-checked:block" aria-hidden="true" />

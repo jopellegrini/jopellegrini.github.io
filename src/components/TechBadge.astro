@@ -9,7 +9,7 @@ interface Props {
 const { name, icon } = Astro.props;
 ---
 
-<div class="rounded-sm border border-line px-[0.3em] py-[0.1em] text-[1.1em]">
-  <Icon name={icon} class="inline h-auto w-[1.6em] align-baseline" aria-hidden="true" />{' '}
-  <p class="m-0 inline-block align-super leading-[2em]">{name}</p>
+<div class="rounded-sm border border-line px-1.5 py-0.5 text-lg">
+  <Icon name={icon} class="inline h-auto w-7 align-baseline" aria-hidden="true" />{' '}
+  <p class="m-0 inline-block align-super leading-9">{name}</p>
 </div>
