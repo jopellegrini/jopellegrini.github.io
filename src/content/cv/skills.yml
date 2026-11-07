@@ -1,0 +1,27 @@
+- id: languages-frameworks
+  title: Langages / frameworks
+  items:
+    - { name: C++, icon: cpp }
+    - { name: C, icon: c }
+    - { name: Java, icon: java }
+    - { name: Node.js, icon: node }
+    - { name: Python, icon: python }
+    - { name: C#, icon: csharp }
+    - { name: SQL, icon: sql }
+    - { name: PHP, icon: php }
+    - { name: HTML, icon: html5 }
+    - { name: CSS, icon: css3 }
+    - { name: JS/TS, icon: js }
+    - { name: Angular, icon: angular }
+
+- id: operating-systems
+  title: Systèmes d'exploitation
+  items:
+    - { name: Unix/Linux, icon: linux }
+    - { name: Windows, icon: windows }
+
+- id: other
+  title: Autres
+  items:
+    - { name: Git, icon: git }
+    - { name: Latex, icon: pdf }

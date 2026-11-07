@@ -1,0 +1,43 @@
+---
+import { getOrderedCollection } from "../../lib/collections";
+import { Icon } from "astro-icon/components";
+import SectionTitle from "../SectionTitle.astro";
+import TechBadge from "../TechBadge.astro";
+
+const groups = await getOrderedCollection("skills");
+const languages = await getOrderedCollection("languages");
+---
+
+<div>
+  <SectionTitle id="skills" title="Compétences" />
+  <div class="main-section__sub">
+    <div class="main-section__skills">
+      <h3 class="main-section__skills__sub-title">Informatique</h3>
+      <div class="main-section__skills__it">
+        {
+          groups.map(({ data }) => (
+            <div class="main-section__skills__it__section">
+              <p>{data.title}</p>
+              <div class="main-section__skills__it__elt-ctn">
+                {data.items.map((item) => (
+                  <TechBadge class="main-section__skills__it__elt" {...item} />
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <h3 class="main-section__skills__sub-title">Langues</h3>
+      <div class="main-section__skills__lang">
+        {
+          languages.map(({ data }) => (
+            <div class="main-section__skills__lang__elt">
+              <Icon name={data.icon} aria-hidden="true" />
+              <p>{data.label}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+---
+import { getOrderedCollection } from "../../lib/collections";
+import { renderMarkdown } from "../../lib/markdown";
+import SectionTitle from "../SectionTitle.astro";
+import TechBadge from "../TechBadge.astro";
+
+const projects = await getOrderedCollection("projects");
+---
+
+<div>
+  <SectionTitle id="projects" title="Projets" />
+  <div class="main-section__sub">
+    {
+      projects.map(({ data }) => (
+        <div class="main-section__project">
+          <p class="main-section__project__title">{data.title}</p>
+          <p class="main-section__project__date">{data.period}</p>
+          <Fragment set:html={renderMarkdown(data.description)} />
+          <div class="main-section__project__tech-ctn">
+            {data.tech.map((item) => (
+              <TechBadge class="main-section__project__tech" {...item} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon/components";
+import SectionTitle from "../SectionTitle.astro";
+
+const links = [
+  { href: "mailto:jopellegrini2@gmail.com", icon: "fa6-solid:envelope", label: "E-mail", external: false },
+  { href: "https://www.linkedin.com/in/joseph-pellegrini/", icon: "fa6-brands:linkedin", label: "LinkedIn", external: true },
+  { href: "https://github.com/jopellegrini", icon: "fa6-brands:github", label: "GitHub", external: true },
+];
+---
+
+<div>
+  <SectionTitle id="contact" title="Contact" />
+  <div class="main-section__sub">
+    <div class="main-section__contact">
+      {
+        links.map(({ href, icon, label, external }) => (
+          <a
+            class="main-section__contact__link"
+            href={href}
+            target={external ? "_blank" : undefined}
+            aria-label={label}
+          >
+            <Icon name={icon} aria-hidden="true" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>

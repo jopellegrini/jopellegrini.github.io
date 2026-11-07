@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE } from "../../site";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { title, description, cover, coverAlt, bibliography } = post.data;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${SITE.name} - Blog`}
+  ogTitle={title}
+  description={description}
+  image={cover.src}
+  ogType="article"
+>
+  <div class="article-container">
+    <p class="article-back">
+      <a href="/blog/"> &lt; Retour aux articles</a>
+    </p>
+    <h1 class="article-title">{title}</h1>
+    <div class="article-main-img-container">
+      <Image src={cover} alt={coverAlt} />
+    </div>
+    <div class="article-section">
+      <Content />
+    </div>
+    {
+      bibliography.length > 0 && (
+        <>
+          <h3>Bibliographie</h3>
+          <div class="article-bib">
+            {bibliography.map((url) => (
+              <a href={url} target="_blank">
+                {url}
+              </a>
+            ))}
+          </div>
+        </>
+      )
+    }
+  </div>
+</BaseLayout>

@@ -1,0 +1,99 @@
+- id: myide
+  title: MyIDE
+  period: juin 2021 - juillet 2021 (6 semaines)
+  description: |
+    Réalisation d'un IDE en Java (Swing). Édition de fichiers, gestion de la structure du projet, intégration GIT et Maven, changement de thème, etc.
+  tech:
+    - { name: Java, icon: java }
+
+- id: tiger
+  title: Tiger
+  period: février 2021 - avril 2021 (7 semaines)
+  description: |
+    Implémentation d'un compilateur pour le langage [Tiger](https://www.lrde.epita.fr/~tiger/tiger.html) en C++.
+
+    Lexer, parser, construction d'AST, binding, type-checking, traduction vers une représentation intermédiaire de haut niveau.
+
+    Sujet complet disponible via [ce lien](https://assignments.lrde.epita.fr/index.html)
+  tech:
+    - { name: C++, icon: cpp }
+
+- id: chess
+  title: Chess
+  period: mars 2021 (4 semaines)
+  description: |
+    Implémentation d'un jeu d'échecs intégrant une intelligence artificielle en C++
+
+    Représentation sous forme de bitboards et algorithme minimax avec alpha-beta pruning.
+  tech:
+    - { name: C++, icon: cpp }
+
+- id: jws
+  title: JWS
+  period: avril 2021 (1 semaine)
+  description: |
+    Implémentation d'une API rest suivant une architecture en couches.
+  tech:
+    - { name: Java, icon: java }
+
+- id: librubrik
+  title: Librubrik
+  period: janvier 2021 (2 jours)
+  description: |
+    Réalisation d'un solveur de rubik's cube.
+  tech:
+    - { name: C++, icon: cpp }
+
+- id: 42sh
+  title: 42sh
+  period: novembre 2020 - décembre 2020 (4 semaines)
+  description: |
+    Implémentation d'un shell conforme à la norme posix.
+
+    Builtins (cd, alias, echo, source, export, exit) et interprétation du language shell (lexer, parser, exécution).
+  tech:
+    - { name: C, icon: c }
+
+- id: malloc
+  title: Malloc
+  period: novembre 2020 (1 semaine)
+  description: |
+    Implémentation d'une bibliothèque d'allocation de mémoire.
+
+    Utilisation de l'appel système **mmap**. Algorithme de métadonnées externes.
+  tech:
+    - { name: C, icon: c }
+
+- id: minimake
+  title: Minimake
+  period: octobre 2020 (1 semaine)
+  description: |
+    Implémentation d'une version minimaliste de l'outil make.
+  tech:
+    - { name: C, icon: c }
+
+- id: myfind
+  title: MyFind
+  period: octobre 2020 (1 semaine)
+  description: |
+    Implémentation d'une version simplifiée de la commande UNIX 'find'.
+  tech:
+    - { name: C, icon: c }
+
+- id: ocr
+  title: OCR
+  period: novembre 2019 - décembre 2019 (2 mois)
+  description: |
+    Implémentation d'un système de reconnaissance optique de caractères.
+
+    Projet disponible sur [GitHub](https://github.com/jopellegrini/OCR).
+  tech:
+    - { name: C, icon: c }
+
+- id: sirius
+  title: Sirius
+  period: mai 2019 - juin 2019 (2 mois)
+  description: |
+    Réalisation d'un jeu vidéo sous le moteur de jeu Unity.
+  tech:
+    - { name: C#, icon: csharp }
