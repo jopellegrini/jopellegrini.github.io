@@ -1,15 +1,15 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import { SITE } from "../site";
-import "../styles/global.css";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE } from '../site';
+import '../styles/global.css';
 
 interface Props {
   title?: string;
   ogTitle?: string;
   description?: string;
   image?: string;
-  ogType?: "website" | "article";
+  ogType?: 'website' | 'article';
 }
 
 const {
@@ -17,7 +17,7 @@ const {
   ogTitle = title,
   description = SITE.description,
   image = SITE.image,
-  ogType = "website",
+  ogType = 'website',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);

@@ -1,25 +1,23 @@
 ---
-import { getOrderedCollection } from "../../lib/collections";
-import { renderMarkdown } from "../../lib/markdown";
-import SectionTitle from "../SectionTitle.astro";
+import { getOrderedCollection } from '../../lib/collections';
+import { renderMarkdown } from '../../lib/markdown';
+import SectionTitle from '../SectionTitle.astro';
 
-const entries = await getOrderedCollection("experience");
+const entries = await getOrderedCollection('experience');
 ---
 
 <div>
   <SectionTitle id="experience" title="Expérience" />
   <div>
-    {
-      entries.map(({ data }) => (
-        <div class="border-l-2 border-line pl-2.5 [&_p]:my-[1em]">
-          <p class="text-[1.3em]">{data.title}</p>
-          <p>
-            <b>{data.company}</b>
-          </p>
-          <div set:html={renderMarkdown(data.description)} />
-          <p class="text-[0.9em] text-muted">{data.period}</p>
-        </div>
-      ))
-    }
+    {entries.map(({ data }) => (
+      <div class="border-l-2 border-line pl-2.5 [&_p]:my-[1em]">
+        <p class="text-[1.3em]">{data.title}</p>
+        <p>
+          <b>{data.company}</b>
+        </p>
+        <div set:html={renderMarkdown(data.description)} />
+        <p class="text-[0.9em] text-muted">{data.period}</p>
+      </div>
+    ))}
   </div>
 </div>

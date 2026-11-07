@@ -1,7 +1,7 @@
-import { defineCollection } from "astro:content";
-import { file, glob } from "astro/loaders";
-import { z } from "astro/zod";
-import { parse } from "yaml";
+import { defineCollection } from 'astro:content';
+import { file, glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+import { parse } from 'yaml';
 
 function orderedYaml(path: string) {
   return file(path, {
@@ -18,7 +18,7 @@ const tech = z.object({
 const order = z.number().int();
 
 const experience = defineCollection({
-  loader: orderedYaml("src/content/cv/experience.yml"),
+  loader: orderedYaml('src/content/cv/experience.yml'),
   schema: z.object({
     order,
     title: z.string(),
@@ -29,7 +29,7 @@ const experience = defineCollection({
 });
 
 const education = defineCollection({
-  loader: orderedYaml("src/content/cv/education.yml"),
+  loader: orderedYaml('src/content/cv/education.yml'),
   schema: z.object({
     order,
     title: z.string(),
@@ -40,7 +40,7 @@ const education = defineCollection({
 });
 
 const skills = defineCollection({
-  loader: orderedYaml("src/content/cv/skills.yml"),
+  loader: orderedYaml('src/content/cv/skills.yml'),
   schema: z.object({
     order,
     title: z.string(),
@@ -49,7 +49,7 @@ const skills = defineCollection({
 });
 
 const languages = defineCollection({
-  loader: orderedYaml("src/content/cv/languages.yml"),
+  loader: orderedYaml('src/content/cv/languages.yml'),
   schema: z.object({
     order,
     icon: z.string(),
@@ -58,7 +58,7 @@ const languages = defineCollection({
 });
 
 const projects = defineCollection({
-  loader: orderedYaml("src/content/cv/projects.yml"),
+  loader: orderedYaml('src/content/cv/projects.yml'),
   schema: z.object({
     order,
     title: z.string(),
@@ -69,7 +69,7 @@ const projects = defineCollection({
 });
 
 const blog = defineCollection({
-  loader: glob({ pattern: "*.md", base: "src/content/blog" }),
+  loader: glob({ pattern: '*.md', base: 'src/content/blog' }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),

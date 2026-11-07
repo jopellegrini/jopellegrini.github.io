@@ -74,15 +74,15 @@ En outre, les cellules relais ont un en-tête supplémentaire contenant :\
 -Une commande supplémentaire.
 
 Cette commande supplémentaire peut être :\
--*Relay data*, pour les données qui circulent dans le flux.\
--*Relay begin*, pour ouvrir un stream.\
--*Relay end*, pour fermer un stream.\
--*Relay teardown*, pour fermer un stream cassé.\
--*Relay connected*, pour notifier l’onion proxy que le relai a commencé.\
--*Relay extend/extended*, pour étendre le circuit et accuser réception (acknowledge).\
--*Relay truncate*, pour fermer une partie du circuit et accuser réception.\
--*Relay sendme*, utilisé pour le contrôle des embouteillages sur un noeud.\
--*Relay drop*, utilisé pour implémenter des communications de tests à longue portée.
+-_Relay data_, pour les données qui circulent dans le flux.\
+-_Relay begin_, pour ouvrir un stream.\
+-_Relay end_, pour fermer un stream.\
+-_Relay teardown_, pour fermer un stream cassé.\
+-_Relay connected_, pour notifier l’onion proxy que le relai a commencé.\
+-_Relay extend/extended_, pour étendre le circuit et accuser réception (acknowledge).\
+-_Relay truncate_, pour fermer une partie du circuit et accuser réception.\
+-_Relay sendme_, utilisé pour le contrôle des embouteillages sur un noeud.\
+-_Relay drop_, utilisé pour implémenter des communications de tests à longue portée.
 
 <figure>
 
@@ -101,11 +101,11 @@ Les proxys onion créent un circuit pour tous les flux TCP. Ainsi, si le navigat
 Les circuits sont créés de manière incrémentielle, c’est-à-dire en négociant une clé avec chaque noeud du circuit, un « saut » à la fois.\
 Supposons qu’Alice souhaite créer un nouveau circuit, dont elle a choisi les noeuds.\
 Alice envoie tout d’abord une cellule de type « create » au premier noeud sur son chemin, appelé Bob, et choisit un « circID » (pour rappel, identifiant de circuit) non utilisé.\
-La payload de la cellule permet de mettre en place le chiffrage symétrique via l’algorithme de Diffie-Hellman. Elle contient ainsi un nombre premier nommé *g*, élevé à une puissance *x*, choisie au hasard. Bob envoie alors le même nombre *g*, cette fois élevé à la puissance *y*, également choisie aléatoirement. Pour rappel du fonctionnement de l’algorithme de Diffie-Hellman, Alice et Bob ont désormais *g <sup>x</sup>* ainsi que *g <sup>y</sup>*, et peuvent ainsi calculer *K = g <sup>xy</sup>*, et utiliser ce nombre pour chiffrer leur communication.
+La payload de la cellule permet de mettre en place le chiffrage symétrique via l’algorithme de Diffie-Hellman. Elle contient ainsi un nombre premier nommé _g_, élevé à une puissance _x_, choisie au hasard. Bob envoie alors le même nombre _g_, cette fois élevé à la puissance _y_, également choisie aléatoirement. Pour rappel du fonctionnement de l’algorithme de Diffie-Hellman, Alice et Bob ont désormais _g <sup>x</sup>_ ainsi que _g <sup>y</sup>_, et peuvent ainsi calculer _K = g <sup>xy</sup>_, et utiliser ce nombre pour chiffrer leur communication.
 
-Pour étendre le circuit, Alice envoie une cellule relai de type « extend » à Bob, en spécifiant l’adresse du noeud qu’elle veut ajouter au circuit, appelé ici Carol, et ajoute à la payload de la cellule *g <sup>x2</sup>*, avec *x2* choisi aléatoirement, qui, comme avec Bob permettra de calculer une clé *K<sub>1</sub>*, permettant le chiffrement des échanges.\
-Bob reçoit une cellule relai de type « extend ». Comme il est le dernier noeud du circuit, il crée une cellule de type « create » ayant toujours *g <sup>x2</sup>* pour payload, et l’envoie à Carol. Comme Alice précédemment, Bob choisit un nouveau *circID*.\
-Lorsque Carol reçoit la cellule, elle renvoie à Bob *g <sup>y2</sup>*, qui renvoie ce nombre à Alice via une cellule relai de type « extended ». Alice et Carol peuvent alors calculer *K<sub>2</sub> = g <sup>x2y2</sup>*, et ainsi communiquer en chiffrant leurs données avec cette clé.\
+Pour étendre le circuit, Alice envoie une cellule relai de type « extend » à Bob, en spécifiant l’adresse du noeud qu’elle veut ajouter au circuit, appelé ici Carol, et ajoute à la payload de la cellule _g <sup>x2</sup>_, avec _x2_ choisi aléatoirement, qui, comme avec Bob permettra de calculer une clé _K<sub>1</sub>_, permettant le chiffrement des échanges.\
+Bob reçoit une cellule relai de type « extend ». Comme il est le dernier noeud du circuit, il crée une cellule de type « create » ayant toujours _g <sup>x2</sup>_ pour payload, et l’envoie à Carol. Comme Alice précédemment, Bob choisit un nouveau _circID_.\
+Lorsque Carol reçoit la cellule, elle renvoie à Bob _g <sup>y2</sup>_, qui renvoie ce nombre à Alice via une cellule relai de type « extended ». Alice et Carol peuvent alors calculer _K<sub>2</sub> = g <sup>x2y2</sup>_, et ainsi communiquer en chiffrant leurs données avec cette clé.\
 On peut remarquer que le processus est très similaire au premier, lors de la création d’un chemin entre Alice et Bob.\
 Le schéma ci-dessous résume le processus de création de circuit et présente une communication TCP basique avec un site internet.
 
@@ -118,19 +118,19 @@ Création de circuits et communication avec une page web
 </figure>
 
 Alice partage désormais une clé avec chacun de noeuds relais sur le circuit.\
-Supposons qu’Alice souhaite, par exemple, envoyer une requête HTTP à un site web. Le circuit est composé de deux noeuds relais, Bob et Carol. Après avoir créé la requête HTTP, Alice va la chiffrer, d’abord avec la clé *K<sub>2</sub>* , partagée avec Carol, puis avec la clé *K*, partagée avec Bob, puis envoyer cette requête via une cellule relai.\
-Lors de la réception de la cellule, Bob va la déchiffrer grâce à la clé *K*, puis l’envoyer à Carol. La cellule reste toujours chiffrée avec la clé *K<sub>2</sub>* . À l’instar de Bob, Carol va déchiffrer la cellule à sa réception, cette fois avec la clé *K<sub>2</sub>* , puis l’envoyer au site web demandé par Alice. Carol va chiffrer la réponse de la part du site web avec la clé *K<sub>2</sub>* , après avoir mis cette réponse dans une nouvelle cellule, puis l’envoyer à Bob, qui va à son tour la chiffrer avec la clé *K*.\
-À la réception de la cellule, Alice n’aura plus qu’à la déchiffrer avec les clés *K* et *K<sub>2</sub>* pour obtenir la réponse du site web en clair.
+Supposons qu’Alice souhaite, par exemple, envoyer une requête HTTP à un site web. Le circuit est composé de deux noeuds relais, Bob et Carol. Après avoir créé la requête HTTP, Alice va la chiffrer, d’abord avec la clé _K<sub>2</sub>_ , partagée avec Carol, puis avec la clé _K_, partagée avec Bob, puis envoyer cette requête via une cellule relai.\
+Lors de la réception de la cellule, Bob va la déchiffrer grâce à la clé _K_, puis l’envoyer à Carol. La cellule reste toujours chiffrée avec la clé _K<sub>2</sub>_ . À l’instar de Bob, Carol va déchiffrer la cellule à sa réception, cette fois avec la clé _K<sub>2</sub>_ , puis l’envoyer au site web demandé par Alice. Carol va chiffrer la réponse de la part du site web avec la clé _K<sub>2</sub>_ , après avoir mis cette réponse dans une nouvelle cellule, puis l’envoyer à Bob, qui va à son tour la chiffrer avec la clé _K_.\
+À la réception de la cellule, Alice n’aura plus qu’à la déchiffrer avec les clés _K_ et _K<sub>2</sub>_ pour obtenir la réponse du site web en clair.
 
 ### La gestion d'erreurs
 
 Une cellule pouvant être altérée lors de son transport, il est nécessaire de gérer des cas d’erreurs.\
-Lors de la réception d’une cellule, un noeud vérifie son intégrité grâce à son hash (en pratique, les noeuds vérifient seulement que les deux premiers bytes de la vérification d’intégrité sont zéro). Si la cellule est invalide, le noeud remplace le *circID* (identifiant de circuit) de la cellule par celui correspondant au noeud suivant sur le chemin, et envoie la cellule au noeud suivant. Si le dernier noeud du circuit reçoit une cellule invalide, le circuit est détruit.\
+Lors de la réception d’une cellule, un noeud vérifie son intégrité grâce à son hash (en pratique, les noeuds vérifient seulement que les deux premiers bytes de la vérification d’intégrité sont zéro). Si la cellule est invalide, le noeud remplace le _circID_ (identifiant de circuit) de la cellule par celui correspondant au noeud suivant sur le chemin, et envoie la cellule au noeud suivant. Si le dernier noeud du circuit reçoit une cellule invalide, le circuit est détruit.\
 Pour détruire le circuit, le proxy (Alice dans l’exemple de la section précédente) envoie une cellule de contrôle de type « destroy ». Chaque noeud sur le chemin ferme alors les flux sur ce circuit et envoie une cellule « destroy » au noeud suivant sur le chemin.
 
 ### L’ouverture et la fermeture de streams
 
-Lorsque l’onion proxy souhaite établir une connexion TCP à une adresse et un port donnés, il sélectionne le circuit le plus récemment créé, ou en crée un s’il n’y en a aucun. Il choisit ensuite le noeud de sortie sur le circuit, qui sera la plupart du temps le dernier noeud du circuit. Le proxy ouvre le stream en envoyant une cellule relai de type « begin » au noeud de sortie, en créant un nouveau *streamID*. Une fois connecté à l’hôte distant, le noeud de sortie envoie à l’onion proxy une cellule relai de type « connected ».\
+Lorsque l’onion proxy souhaite établir une connexion TCP à une adresse et un port donnés, il sélectionne le circuit le plus récemment créé, ou en crée un s’il n’y en a aucun. Il choisit ensuite le noeud de sortie sur le circuit, qui sera la plupart du temps le dernier noeud du circuit. Le proxy ouvre le stream en envoyant une cellule relai de type « begin » au noeud de sortie, en créant un nouveau _streamID_. Une fois connecté à l’hôte distant, le noeud de sortie envoie à l’onion proxy une cellule relai de type « connected ».\
 Lorsque le stream doit être fermé, le proxy utilise un « two-step handshake ». Si une erreur survient lors de la fermeture de stream, le noeud où l’erreur est survenue envoie une cellule relai de type « teardown cell » à la cellule suivante. Sinon, il envoie une cellule relai de type « end ».
 
 ### Pour résumer

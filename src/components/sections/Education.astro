@@ -1,24 +1,22 @@
 ---
-import { getOrderedCollection } from "../../lib/collections";
-import SectionTitle from "../SectionTitle.astro";
+import { getOrderedCollection } from '../../lib/collections';
+import SectionTitle from '../SectionTitle.astro';
 
-const entries = await getOrderedCollection("education");
+const entries = await getOrderedCollection('education');
 ---
 
 <div>
   <SectionTitle id="education" title="Formation" />
   <div>
-    {
-      entries.map(({ data }) => (
-        <div class="border-l-2 border-line pl-2.5 [&_p]:my-[1em]">
-          <p class="text-[1.3em]">{data.title}</p>
-          {data.details && <p>{data.details}</p>}
-          <p>
-            <b>{data.school}</b>
-          </p>
-          <p class="text-[0.9em] text-muted">{data.period}</p>
-        </div>
-      ))
-    }
+    {entries.map(({ data }) => (
+      <div class="border-l-2 border-line pl-2.5 [&_p]:my-[1em]">
+        <p class="text-[1.3em]">{data.title}</p>
+        {data.details && <p>{data.details}</p>}
+        <p>
+          <b>{data.school}</b>
+        </p>
+        <p class="text-[0.9em] text-muted">{data.period}</p>
+      </div>
+    ))}
   </div>
 </div>

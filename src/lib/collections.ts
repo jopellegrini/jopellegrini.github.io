@@ -1,6 +1,6 @@
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from 'astro:content';
 
-type OrderedCollection = "experience" | "education" | "skills" | "languages" | "projects";
+type OrderedCollection = 'experience' | 'education' | 'skills' | 'languages' | 'projects';
 
 export async function getOrderedCollection<C extends OrderedCollection>(
   name: C,
