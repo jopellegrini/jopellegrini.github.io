@@ -7,16 +7,16 @@ const entries = await getOrderedCollection("education");
 
 <div>
   <SectionTitle id="education" title="Formation" />
-  <div class="main-section__sub">
+  <div>
     {
       entries.map(({ data }) => (
-        <div class="main-section__education">
-          <p class="main-section__education__title">{data.title}</p>
+        <div class="border-l-2 border-line pl-2.5 [&_p]:my-[1em]">
+          <p class="text-[1.3em]">{data.title}</p>
           {data.details && <p>{data.details}</p>}
           <p>
             <b>{data.school}</b>
           </p>
-          <p class="main-section__education__date">{data.period}</p>
+          <p class="text-[0.9em] text-muted">{data.period}</p>
         </div>
       ))
     }

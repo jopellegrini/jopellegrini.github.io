@@ -7,7 +7,7 @@ interface Props {
 const { id, title } = Astro.props;
 ---
 
-<div class="main-section__title-container">
-  <a class="anchor" id={id}></a>
-  <h2 class="main-section__title">{title}</h2>
+<div class="my-3.75 border-b-2 border-primary">
+  <a class="invisible relative -top-25 block" id={id}></a>
+  <h2 class="m-0 text-[1.5em] font-bold text-primary">{title}</h2>
 </div>

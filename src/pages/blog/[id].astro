@@ -25,24 +25,41 @@ const { Content } = await render(post);
   image={cover.src}
   ogType="article"
 >
-  <div class="article-container">
-    <p class="article-back">
-      <a href="/blog/"> &lt; Retour aux articles</a>
+  <div class="mx-auto w-3/5 max-lg:mx-[2em] max-lg:w-auto">
+    <p class="mt-[8em] mb-[1em]">
+      <a class="underline" href="/blog/"> &lt; Retour aux articles</a>
     </p>
-    <h1 class="article-title">{title}</h1>
-    <div class="article-main-img-container">
-      <Image src={cover} alt={coverAlt} />
+    <h1 class="my-[0.67em] text-center text-[3em] font-bold underline">{title}</h1>
+    <div>
+      <Image class="my-[1em] inline h-auto max-w-full align-baseline" src={cover} alt={coverAlt} />
     </div>
-    <div class="article-section">
+    <div
+      class:list={[
+        "[&>p]:my-[1em] [&>p]:text-[1.2em] [&>p]:leading-[1.6em]",
+        "[&_h2]:my-[0.83em] [&_h2]:text-[1.8em] [&_h2]:font-bold [&_h2]:text-primary [&_h2]:underline",
+        "[&_h3]:my-[1em] [&_h3]:text-[1.4em] [&_h3]:font-bold [&_h3]:underline",
+        "[&_a]:underline",
+        "[&_sub]:static [&_sub]:align-sub [&_sub]:text-[smaller] [&_sub]:leading-[inherit]",
+        "[&_sup]:static [&_sup]:align-super [&_sup]:text-[smaller] [&_sup]:leading-[inherit]",
+        "[&_figure]:mx-auto [&_figure]:my-[3em] [&_figure]:w-4/5 max-lg:[&_figure]:w-full",
+        "[&_figure[data-size=small]]:w-3/5 max-md:[&_figure[data-size=small]]:w-full",
+        "[&_figure>p]:my-[1em] [&_figure>p]:text-center [&_figure>p]:text-[1.1em] [&_figure>p]:italic",
+        "[&_figure_img]:inline [&_figure_img]:h-auto [&_figure_img]:w-full [&_figure_img]:align-baseline",
+      ]}
+    >
       <Content />
     </div>
     {
       bibliography.length > 0 && (
         <>
-          <h3>Bibliographie</h3>
-          <div class="article-bib">
+          <h3 class="my-[1em] text-[1.4em] font-bold underline">Bibliographie</h3>
+          <div class="flex flex-col">
             {bibliography.map((url) => (
-              <a href={url} target="_blank">
+              <a
+                class="mb-[0.4em] text-[1.1em] underline [line-break:anywhere]"
+                href={url}
+                target="_blank"
+              >
                 {url}
               </a>
             ))}
