@@ -9,16 +9,16 @@ const projects = await getOrderedCollection("projects");
 
 <div>
   <SectionTitle id="projects" title="Projets" />
-  <div class="main-section__sub">
+  <div>
     {
       projects.map(({ data }) => (
-        <div class="main-section__project">
-          <p class="main-section__project__title">{data.title}</p>
-          <p class="main-section__project__date">{data.period}</p>
-          <Fragment set:html={renderMarkdown(data.description)} />
-          <div class="main-section__project__tech-ctn">
+        <div class="border-l-2 border-line pl-2.5">
+          <p class="mt-[1em] mb-1.25 text-[1.3em] font-bold">{data.title}</p>
+          <p class="m-0 text-[0.9em] text-muted">{data.period}</p>
+          <div class="[&>p]:my-[1em]" set:html={renderMarkdown(data.description)} />
+          <div class="flex">
             {data.tech.map((item) => (
-              <TechBadge class="main-section__project__tech" {...item} />
+              <TechBadge {...item} />
             ))}
           </div>
         </div>

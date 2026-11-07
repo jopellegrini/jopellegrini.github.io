@@ -26,13 +26,13 @@ En 1995, préoccupés par le manque de sécurité sur internet, et la facilité 
 
 Au début des années 2000, Roger Dingledine, diplômé du MIT, commence à travailler aux côtés de Paul Syverson sur un projet de routage en oignon du NRL. Nick Mathewson, un camarade de classe de Dingledine au MIT, les rejoint rapidement.
 
-<div class="article-img-container-min">
+<figure data-size="small">
 
 ![roger dingledine](./tor/roger_dingledine.jpeg)
 
 Roger Dingledine en 2013
 
-</div>
+</figure>
 
 Le réseau est déployé en octobre 2002, et son code publié sous une licence de logiciel libre. Fin 2003, le réseau comptait plus d’une dizaine de noeuds volontaires, principalement aux États-Unis.
 
@@ -57,13 +57,13 @@ Les commandes des cellules de contrôle sont :\
 -Create, pour créer un nouveau circuit.\
 -Destroy, pour supprimer un circuit.
 
-<div class="article-img-container">
+<figure>
 
 ![controll cell header](./tor/control_cell_header.png)
 
 En-tête d’une cellule de contrôle
 
-</div>
+</figure>
 
 Les cellules relais ont toutes une commande « Relay ».
 
@@ -84,13 +84,13 @@ Cette commande supplémentaire peut être :\
 -*Relay sendme*, utilisé pour le contrôle des embouteillages sur un noeud.\
 -*Relay drop*, utilisé pour implémenter des communications de tests à longue portée.
 
-<div class="article-img-container">
+<figure>
 
 ![relay cell header](./tor/relay_cell_header.png)
 
 En-tête d’une cellule relai
 
-</div>
+</figure>
 
 Les en-têtes et payloads des cellules relais sont chiffrés et déchiffrés lorsque la cellule relai se déplace le long du circuit, en utilisant un chiffrement AES 128-bit.
 
@@ -109,13 +109,13 @@ Lorsque Carol reçoit la cellule, elle renvoie à Bob *g <sup>y2</sup>*, qui ren
 On peut remarquer que le processus est très similaire au premier, lors de la création d’un chemin entre Alice et Bob.\
 Le schéma ci-dessous résume le processus de création de circuit et présente une communication TCP basique avec un site internet.
 
-<div class="article-img-container">
+<figure>
 
 ![recap schema](./tor/recap_schema.png)
 
 Création de circuits et communication avec une page web
 
-</div>
+</figure>
 
 Alice partage désormais une clé avec chacun de noeuds relais sur le circuit.\
 Supposons qu’Alice souhaite, par exemple, envoyer une requête HTTP à un site web. Le circuit est composé de deux noeuds relais, Bob et Carol. Après avoir créé la requête HTTP, Alice va la chiffrer, d’abord avec la clé *K<sub>2</sub>* , partagée avec Carol, puis avec la clé *K*, partagée avec Bob, puis envoyer cette requête via une cellule relai.\
@@ -137,24 +137,24 @@ Lorsque le stream doit être fermé, le proxy utilise un « two-step handshake �
 
 Alice récupère d'abord une liste de noeuds grâce à un « directory server » du réseau Tor. Sur le schéma ci-dessous, les noeuds sélectionnés sont marqués par une croix verte.
 
-<div class="article-img-container">
+<figure>
 
 ![recap](./tor/recap1.png)
 
-</div>
+</figure>
 
 Lorsqu’elle veut établir une connexion à un serveur, elle choisit un chemin aléatoire pour accéder à ce serveur. La connexion passera par tous ces noeuds, chacun apportant une couche de chiffrage supplémentaire.
 
-<div class="article-img-container">
+<figure>
 
 ![recap](./tor/recap2.png)
 
-</div>
+</figure>
 
 Après environ 10 minutes, Alice génère un nouveau chemin.
 
-<div class="article-img-container">
+<figure>
 
 ![recap](./tor/recap3.png)
 
-</div>
+</figure>

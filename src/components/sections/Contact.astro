@@ -11,17 +11,17 @@ const links = [
 
 <div>
   <SectionTitle id="contact" title="Contact" />
-  <div class="main-section__sub">
-    <div class="main-section__contact">
+  <div>
+    <div class="flex items-center justify-center text-[3em] max-xs:flex-col">
       {
         links.map(({ href, icon, label, external }) => (
           <a
-            class="main-section__contact__link"
+            class="box-content size-[1em] cursor-pointer rounded-full border-2 border-primary bg-primary p-[0.3em] text-center text-page transition-all duration-200 ease-[ease] not-last:mr-[1em] hover:bg-primary-hover max-xs:mt-[0.6em] max-xs:not-last:mr-0"
             href={href}
             target={external ? "_blank" : undefined}
             aria-label={label}
           >
-            <Icon name={icon} aria-hidden="true" />
+            <Icon name={icon} class="inline align-super" aria-hidden="true" />
           </a>
         ))
       }

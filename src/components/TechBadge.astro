@@ -2,14 +2,13 @@
 import { Icon } from "astro-icon/components";
 
 interface Props {
-  class: "main-section__skills__it__elt" | "main-section__project__tech";
   name: string;
   icon: string;
 }
 
-const { class: className, name, icon } = Astro.props;
+const { name, icon } = Astro.props;
 ---
 
-<div class={className}>
-  <Icon name={icon} aria-hidden="true" />{" "}<p>{name}</p>
+<div class="m-[0.8em] rounded-sm border border-line px-[0.3em] py-[0.1em] text-[1.1em]">
+  <Icon name={icon} class="inline h-auto w-[1.6em] align-baseline" aria-hidden="true" />{" "}<p class="m-0 inline-block align-super leading-[2em]">{name}</p>
 </div>

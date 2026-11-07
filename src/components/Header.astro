@@ -11,64 +11,35 @@ const links = [
 ];
 ---
 
-<header class="main-header full-width">
-  <nav class="main-nav" id="main-nav-cnt">
-    <div>
-      <a class="main-nav__a" href="/">{SITE.name}</a>
+<header class="group w-full">
+  <input type="checkbox" id="nav-toggle" class="sr-only" aria-label="Menu" />
+  <nav
+    class="fixed top-0 z-990 flex h-[3em] w-full items-center justify-between bg-primary text-[1.2em] text-white max-lg:hidden max-lg:h-auto max-lg:flex-col max-lg:text-center group-has-checked:max-lg:flex"
+  >
+    <div class="ml-[1em] max-lg:mt-[3em] max-lg:ml-0 max-lg:h-[2em]">
+      <a href="/">{SITE.name}</a>
     </div>
-    <ul class="main-ul">
+    <ul
+      class="flex flex-row max-lg:flex-col"
+      onclick="document.getElementById('nav-toggle').checked = false"
+    >
       {
         links.map(({ href, label }) => (
-          <li class="main-ul__li">
-            <a class="main-nav__a" href={href}>
-              {label}
-            </a>
+          <li class="mx-[1em] max-lg:m-0 max-lg:h-[2em]">
+            <a href={href}>{label}</a>
           </li>
         ))
       }
     </ul>
-    <div>
-      <a class="main-nav__a" href="/blog/">Blog</a>
+    <div class="mr-[1em] max-lg:mr-0 max-lg:mb-[1em]">
+      <a href="/blog/">Blog</a>
     </div>
   </nav>
-  <div class="small-nav-toggle" id="main-nav-toggler">
-    <Icon
-      name="menu"
-      size="2em"
-      class="small-nav-toggle__btn"
-      id="small-nav-open"
-      aria-label="menu"
-      role="img"
-    />
-    <Icon
-      name="close"
-      size="2em"
-      class="small-nav-toggle__btn"
-      id="small-nav-close"
-      aria-label="close menu"
-      role="img"
-    />
-  </div>
+  <label
+    for="nav-toggle"
+    class="fixed top-0 z-999 m-[1em] box-content hidden cursor-pointer rounded-[0.4em] bg-primary p-[1em] transition-all duration-200 ease-[ease] hover:bg-primary-light max-lg:flex max-lg:h-[2em]"
+  >
+    <Icon name="menu" size="2em" class="group-has-checked:hidden" aria-hidden="true" />
+    <Icon name="close" size="2em" class="hidden group-has-checked:block" aria-hidden="true" />
+  </label>
 </header>
-
-<script>
-  const menu = document.getElementById("main-nav-cnt")!;
-  const toggler = document.getElementById("main-nav-toggler")!;
-  const openIcon = document.getElementById("small-nav-open")!;
-  const closeIcon = document.getElementById("small-nav-close")!;
-  let opened = false;
-
-  function toggleMenu() {
-    opened = !opened;
-    menu.style.display = opened ? "flex" : "none";
-    openIcon.style.display = opened ? "none" : "flex";
-    closeIcon.style.display = opened ? "flex" : "none";
-  }
-
-  toggler.addEventListener("click", toggleMenu);
-  menu.querySelectorAll(".main-ul .main-nav__a").forEach((link) =>
-    link.addEventListener("click", () => {
-      if (opened) toggleMenu();
-    }),
-  );
-</script>

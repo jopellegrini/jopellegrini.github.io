@@ -9,16 +9,25 @@ import { SITE } from "../site";
 ---
 
 <BaseLayout>
-  <div class="top-section full-width">
-    <div class="top-section-back">
-      <div class="top-section-back-right"></div>
+  <div
+    class="relative mt-[3em] flex h-125 w-full overflow-hidden bg-primary text-white max-lg:mt-0"
+  >
+    <div
+      class="absolute top-0 left-0 flex h-full w-2/5 justify-end bg-[url(/images/top-back.png)] bg-cover bg-center max-xl:w-1/2 max-sm:w-4/5"
+    >
+      <div
+        class="relative size-0 border-b-500 border-l-150 border-b-primary border-l-transparent"
+      >
+      </div>
     </div>
-    <div class="top-section-right">
-      <h1 class="top-section__h1">{SITE.name}</h1>
-      <p class="top-section__p">{SITE.headline}</p>
+    <div
+      class="relative z-2 box-content w-full max-w-full bg-black/10 pt-37.5 pl-[45%] max-xl:pl-[55%]"
+    >
+      <h1 class="my-[0.67em] pr-2.5 text-[2.5em] font-bold">{SITE.name}</h1>
+      <p class="my-[1em] pr-2.5 text-[1.5em]">{SITE.headline}</p>
     </div>
   </div>
-  <div class="main-section centered">
+  <div class="mx-auto flex w-4/5 flex-col">
     <Experience />
     <Education />
     <Skills />

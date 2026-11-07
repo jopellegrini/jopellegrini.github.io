@@ -6,14 +6,14 @@ const externalLinkIcon = (() => {
   const data = getIconData(faSolid, "arrow-up-right-from-square");
   if (!data) throw new Error("fa6-solid:arrow-up-right-from-square not found");
   const { attributes, body } = iconToSVG(data);
-  return iconToHTML(body, { ...attributes, "aria-hidden": "true" });
+  return iconToHTML(body, { ...attributes, class: "inline align-baseline", "aria-hidden": "true" });
 })();
 
 const marked = new Marked({
   renderer: {
     link({ href, tokens }) {
       const text = this.parser.parseInline(tokens);
-      return `<a href="${href}" target="_blank">${text} ${externalLinkIcon}</a>`;
+      return `<a class="underline" href="${href}" target="_blank">${text} ${externalLinkIcon}</a>`;
     },
   },
 });

@@ -10,14 +10,16 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout title={`${SITE.name} - Blog`}>
-  <h1 class="blog-top-section__h1">Blog</h1>
+  <h1 class="mt-[2.2em] mb-[0.67em] text-center text-[3em] font-bold">Blog</h1>
   {
     posts.map((post) => (
-      <div class="blog-article-container">
-        <a class="blog-article-link" href={`/blog/${post.id}/`}>
-          <h2 class="blog-article-title">{post.data.title}</h2>
-          <p class="blog-article-desc">{post.data.description}</p>
-          <p class="blog-article-date">{formatDate(post.data.date)}</p>
+      <div class="mx-auto w-7/10 border-b-2 border-line">
+        <a href={`/blog/${post.id}/`}>
+          <h2 class="my-[0.83em] text-[2.1em] font-bold text-primary underline">
+            {post.data.title}
+          </h2>
+          <p class="my-[1em]">{post.data.description}</p>
+          <p class="my-[1em] text-muted">{formatDate(post.data.date)}</p>
         </a>
       </div>
     ))
