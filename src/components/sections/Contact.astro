@@ -7,18 +7,21 @@ const links = [
     href: 'mailto:jopellegrini2@gmail.com',
     icon: 'fa6-solid:envelope',
     label: 'E-mail',
+    handle: 'jopellegrini2@gmail.com',
     external: false,
   },
   {
     href: 'https://www.linkedin.com/in/joseph-pellegrini/',
     icon: 'fa6-brands:linkedin',
     label: 'LinkedIn',
+    handle: 'joseph-pellegrini',
     external: true,
   },
   {
     href: 'https://github.com/jopellegrini',
     icon: 'fa6-brands:github',
     label: 'GitHub',
+    handle: 'jopellegrini',
     external: true,
   },
 ];
@@ -26,18 +29,21 @@ const links = [
 
 <div>
   <SectionTitle id="contact" title="Contact" />
-  <div>
-    <div class="flex items-center justify-center text-5xl max-xs:flex-col">
-      {links.map(({ href, icon, label, external }) => (
-        <a
-          class="box-content size-12 cursor-pointer rounded-full border-2 border-primary bg-primary p-3.5 text-center text-page transition-all duration-200 ease-in-out not-last:mr-12 hover:bg-primary-hover max-xs:mt-7 max-xs:not-last:mr-0"
-          href={href}
-          target={external ? '_blank' : undefined}
-          aria-label={label}
-        >
-          <Icon name={icon} class="inline align-super" aria-hidden="true" />
-        </a>
-      ))}
-    </div>
+  <div class="grid grid-cols-3 gap-4 max-md:grid-cols-1">
+    {links.map(({ href, icon, label, handle, external }) => (
+      <a
+        class="group flex items-center gap-3 rounded-md border border-line bg-white p-4 shadow-xs transition hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
+        href={href}
+        target={external ? '_blank' : undefined}
+      >
+        <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-page transition-colors group-hover:bg-primary-light">
+          <Icon name={icon} class="size-5" aria-hidden="true" />
+        </span>
+        <span class="min-w-0">
+          <span class="block font-bold text-primary">{label}</span>
+          <span class="block truncate text-sm text-muted">{handle}</span>
+        </span>
+      </a>
+    ))}
   </div>
 </div>
