@@ -32,15 +32,15 @@ const { Content } = await render(post);
         &lt; Retour aux articles
       </a>
     </p>
-    <h1 class="my-8 text-center text-5xl font-bold underline">{title}</h1>
+    <h1 class="my-8 text-center text-5xl font-semibold underline">{title}</h1>
     <div>
       <Image class="my-4 inline h-auto max-w-full align-baseline" src={cover} alt={coverAlt} />
     </div>
     <div
       class:list={[
         '[&>p]:my-5 [&>p]:text-xl [&>p]:leading-relaxed',
-        '[&_h2]:my-6 [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-primary [&_h2]:underline',
-        '[&_h3]:my-6 [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:underline',
+        '[&_h2]:my-6 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:text-primary [&_h2]:underline',
+        '[&_h3]:my-6 [&_h3]:text-2xl [&_h3]:font-semibold [&_h3]:underline',
         '[&_a]:underline',
         '[&_sub]:static [&_sub]:align-sub [&_sub]:text-base [&_sub]:leading-none',
         '[&_sup]:static [&_sup]:align-super [&_sup]:text-base [&_sup]:leading-none',
@@ -54,7 +54,7 @@ const { Content } = await render(post);
     </div>
     {bibliography.length > 0 && (
       <>
-        <h3 class="my-6 text-2xl font-bold underline">Bibliographie</h3>
+        <h3 class="my-6 text-2xl font-semibold underline">Bibliographie</h3>
         <div class="flex flex-col">
           {bibliography.map((url) => (
             <a

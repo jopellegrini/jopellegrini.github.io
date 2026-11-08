@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/roboto.ttf') format('truetype');
+  src: url('/fonts/roboto.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
 }
 
 @theme {
@@ -15,7 +17,7 @@
 
   --font-sans: 'Roboto', sans-serif;
 
-  --color-primary: #162136;
+  --color-primary: #1b2840;
   --color-primary-hover: #213252;
   --color-primary-light: #283c61;
   --color-line: #e5e5e5;
