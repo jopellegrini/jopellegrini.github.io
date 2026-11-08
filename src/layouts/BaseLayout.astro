@@ -1,5 +1,4 @@
 ---
-import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE } from '../site';
 import '../styles/global.css';
@@ -44,11 +43,10 @@ const imageUrl = new URL(image, Astro.site);
     <meta name="twitter:card" content="summary" />
   </head>
 
-  <body class="bg-page pb-5 leading-tight">
+  <body class="bg-page pb-10 leading-tight">
     <Header />
     <main>
       <slot />
     </main>
-    <Footer />
   </body>
 </html>
