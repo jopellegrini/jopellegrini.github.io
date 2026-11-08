@@ -10,7 +10,7 @@ const entries = await getOrderedCollection('education');
   <SectionTitle id="education" title="Formation" />
   <div class="flex flex-col gap-4">
     {entries.map(({ data }) => (
-      <DatedCard title={data.title} subtitle={data.school} period={data.period}>
+      <DatedCard title={data.title} subtitle={data.school} startDate={data.startDate} endDate={data.endDate}>
         {data.details && <p>{data.details}</p>}
       </DatedCard>
     ))}

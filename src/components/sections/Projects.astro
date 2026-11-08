@@ -12,7 +12,7 @@ const projects = await getOrderedCollection('projects');
   <SectionTitle id="projects" title="Projets" />
   <div class="grid gap-4 md:grid-cols-2">
     {projects.map(({ data }) => (
-      <DatedCard title={data.title} period={data.period}>
+      <DatedCard title={data.title} startDate={data.startDate} endDate={data.endDate}>
         <Fragment set:html={renderMarkdown(data.description)} />
         <Fragment slot="footer">
           {data.tech.map((item) => (

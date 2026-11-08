@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { parse } from 'yaml';
+import { PARTIAL_DATE_PATTERN } from './lib/period';
 
 function orderedYaml(path: string) {
   return file(path, {
@@ -17,26 +18,45 @@ const tech = z.object({
 
 const order = z.number().int();
 
+const partialDate = z.coerce.string().regex(PARTIAL_DATE_PATTERN);
+
+const period = {
+  startDate: partialDate,
+  endDate: partialDate.optional(),
+};
+
+function isValidPeriod({ startDate, endDate }: { startDate: string; endDate?: string }) {
+  return !endDate || (endDate.length === startDate.length && endDate >= startDate);
+}
+
+const invalidPeriod = {
+  message: 'endDate must use the same format as startDate and not be before it',
+};
+
 const experience = defineCollection({
   loader: orderedYaml('src/content/cv/experience.yml'),
-  schema: z.object({
-    order,
-    title: z.string(),
-    company: z.string(),
-    description: z.string(),
-    period: z.string(),
-  }),
+  schema: z
+    .object({
+      order,
+      title: z.string(),
+      company: z.string(),
+      description: z.string(),
+      ...period,
+    })
+    .refine(isValidPeriod, invalidPeriod),
 });
 
 const education = defineCollection({
   loader: orderedYaml('src/content/cv/education.yml'),
-  schema: z.object({
-    order,
-    title: z.string(),
-    details: z.string().optional(),
-    school: z.string(),
-    period: z.string(),
-  }),
+  schema: z
+    .object({
+      order,
+      title: z.string(),
+      details: z.string().optional(),
+      school: z.string(),
+      ...period,
+    })
+    .refine(isValidPeriod, invalidPeriod),
 });
 
 const skills = defineCollection({
@@ -59,13 +79,15 @@ const languages = defineCollection({
 
 const projects = defineCollection({
   loader: orderedYaml('src/content/cv/projects.yml'),
-  schema: z.object({
-    order,
-    title: z.string(),
-    period: z.string(),
-    description: z.string(),
-    tech: z.array(tech),
-  }),
+  schema: z
+    .object({
+      order,
+      title: z.string(),
+      description: z.string(),
+      tech: z.array(tech),
+      ...period,
+    })
+    .refine(isValidPeriod, invalidPeriod),
 });
 
 const blog = defineCollection({

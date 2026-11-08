@@ -1,6 +1,7 @@
 - id: myide
   title: MyIDE
-  period: juin 2021 - juillet 2021 (6 semaines)
+  startDate: 2021-06-07
+  endDate: 2021-07-18
   description: |
     Réalisation d'un IDE en Java (Swing). Édition de fichiers, gestion de la structure du projet, intégration GIT et Maven, changement de thème, etc.
   tech:
@@ -8,7 +9,8 @@
 
 - id: tiger
   title: Tiger
-  period: février 2021 - avril 2021 (7 semaines)
+  startDate: 2021-02-22
+  endDate: 2021-04-11
   description: |
     Implémentation d'un compilateur pour le langage [Tiger](https://www.lrde.epita.fr/~tiger/tiger.html) en C++.
 
@@ -20,7 +22,8 @@
 
 - id: chess
   title: Chess
-  period: mars 2021 (4 semaines)
+  startDate: 2021-03-01
+  endDate: 2021-03-28
   description: |
     Implémentation d'un jeu d'échecs intégrant une intelligence artificielle en C++
 
@@ -30,7 +33,8 @@
 
 - id: jws
   title: JWS
-  period: avril 2021 (1 semaine)
+  startDate: 2021-04-12
+  endDate: 2021-04-18
   description: |
     Implémentation d'une API rest suivant une architecture en couches.
   tech:
@@ -38,7 +42,8 @@
 
 - id: librubrik
   title: Librubrik
-  period: janvier 2021 (2 jours)
+  startDate: 2021-01-16
+  endDate: 2021-01-17
   description: |
     Réalisation d'un solveur de rubik's cube.
   tech:
@@ -46,7 +51,8 @@
 
 - id: 42sh
   title: 42sh
-  period: novembre 2020 - décembre 2020 (4 semaines)
+  startDate: 2020-11-23
+  endDate: 2020-12-20
   description: |
     Implémentation d'un shell conforme à la norme posix.
 
@@ -56,7 +62,8 @@
 
 - id: malloc
   title: Malloc
-  period: novembre 2020 (1 semaine)
+  startDate: 2020-11-09
+  endDate: 2020-11-15
   description: |
     Implémentation d'une bibliothèque d'allocation de mémoire.
 
@@ -66,7 +73,8 @@
 
 - id: minimake
   title: Minimake
-  period: octobre 2020 (1 semaine)
+  startDate: 2020-10-12
+  endDate: 2020-10-18
   description: |
     Implémentation d'une version minimaliste de l'outil make.
   tech:
@@ -74,7 +82,8 @@
 
 - id: myfind
   title: MyFind
-  period: octobre 2020 (1 semaine)
+  startDate: 2020-10-19
+  endDate: 2020-10-25
   description: |
     Implémentation d'une version simplifiée de la commande UNIX 'find'.
   tech:
@@ -82,7 +91,8 @@
 
 - id: ocr
   title: OCR
-  period: novembre 2019 - décembre 2019 (2 mois)
+  startDate: 2019-11
+  endDate: 2019-12
   description: |
     Implémentation d'un système de reconnaissance optique de caractères.
 
@@ -92,7 +102,8 @@
 
 - id: sirius
   title: Sirius
-  period: mai 2019 - juin 2019 (2 mois)
+  startDate: 2019-05
+  endDate: 2019-06
   description: |
     Réalisation d'un jeu vidéo sous le moteur de jeu Unity.
   tech:
